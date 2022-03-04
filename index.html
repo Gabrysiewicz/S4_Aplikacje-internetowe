@@ -4,14 +4,54 @@
         <meta charset="utf-8">
         <meta lang="en">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Chain Warden</title>
-        <meta name="description" content="Homepage for other sites.">
+        <title>List+Table</title>
+        <meta name="description" content="">
         <meta name="author" content="Kamil Gabrysiewicz">
 
         <link rel='stylesheet' type="text/css" href="style.css">
     </head>
     <body>
-        <h1>Hello There</h1>
+        <h1>Szybki kurs HTML</h1>
+        <a href="#">Podstawowe znaczniki</a>
+        <a href="#">Tworzenie Tabel</a>
+        <a href="#">Budowa formularzy</a> 
+        <h2>Podstawowe znaczniki HTML to:</h2>
+        <ul>
+            <li>&lt;hmtl&gt; - korzeń dokumentu</li>
+            <li>&lt;head&gt; - nagłówek strony z informacjami dla przeglądarek</li>
+            <li>&lt;body&gt; - właściwa treść dokumentu widoczna w oknie przeglądarki</li>
+            <li>&lt;div&gt;- element blokowy</li>
+            <li>&lt;p&gt; - akapit</li>
+            <li>&lt;ol&gt;, &lt;ul&gt;, &lt;li&gt; - elementy listy wypunktowanej lub numerowanej</li>
+            <li>&lt;img&gt; - obrazek</li>
+            <li>&lt;a&gt; - hiperłącze</li>
+        </ul>
+        <a href="#">HTML walidator</a><img src="w3c.png" alt="w3c logo"/>
+        <p>&copy;BP</p>
+        <h1>Przykładowa tabela HTML:</h1>
+        
+        <table>
+            <caption>Popularność języków programowania:</caption>
+            <thead style="text-align: center;">
+                <tr>    <th rowspan="2">Język programowania</th>    <th colspan="2">Pozycja</th></tr>
+                <tr>    <th>Luty 2020          </th><th>2015</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Java</td>   <td>1</td>  <td>2</td></tr>
+                <tr><td>C</td>      <td>2</td>  <td>1</td></tr>
+                <tr><td>Python</td> <td>3</td>  <td>5</td></tr>
+                <tr><td>C++</td>    <td>4</td>  <td>4</td></tr>
+                <tr><td>C#</td>     <td>5</td>  <td>7</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3">
+                    Na podstawie:
+                    <br><a href="#">http://www.tiobe.com</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

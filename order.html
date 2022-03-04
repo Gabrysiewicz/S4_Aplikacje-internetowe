@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Order</title>
+        <meta name="description" content="pizza order page">
+        <meta name="author" content="Kamil Gabrysiewicz">
+
+        <!-- <link rel='stylesheet' type="text/css" href="style.css"> -->
+    </head>
+    <body>
+        <h1>Kreator Pizzy</h1>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Rozmiar</legend>
+                <input type="radio" name="size" value="small"><label for="size">Mała</label>
+                <input type="radio" name="size" value="medium"><label for="size">Średnia</label>
+                <input type="radio" name="size" value="large"><label for="size">Duża</label>
+            </fieldset>
+            <fieldset>
+                <legend>Dodatki:</legend>
+                <input type="checkbox" name="szynka" value="szynka"><label for="szynka">Szynka</label>
+                <br>
+                <input type="checkbox" name="salami" value="salami"><label for="salami">Salami</label>
+                <br>
+                <input type="checkbox" name="boczek" value="boczek"><label for="boczek">Boczek</label>
+                <br>
+                <input type="checkbox" name="papryka" value="papryka"><label for="papryka">Papryka</label>
+                <br>
+                <input type="checkbox" name="pomidor" value="pomidor"><label for="pomidor">Pomidor</label>
+                <br>
+                <input type="checkbox" name="ser" value="ser"><label for="ser">Ser</label>
+            </fieldset>
+            <fieldset>
+                <legend>Sosy:</legend>
+                <label for="sos">Wybierz sos:</label>
+                <select name="sos">
+                    <option value="pomidorowy">Pomidorowy</option>
+                    <option value="czosnkowy">Czosnkowy</option>
+                    <option value="ketchup-lagodny">Ketchup łagodny</option>
+                    <option value="ketchup-pikantny">Ketchup pikantny</option>
+                </select>
+                <br>
+                <label for="additional-desc">Inne uwagi:</label>
+                <textarea></textarea>
+            </fieldset>
+            <br>
+            <input type="reset" value="Wyczyść dane">
+            <input type="submit" value="Wyślij zamówienie">
+        </form>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
