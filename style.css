@@ -1,6 +1,28 @@
 html, body{
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color:burlywood;
+    background-color: rgb(220, 220, 220);
+    color:rgb(30, 30, 30);
+}
+table{
+    border-collapse: collapse;
+}
+thead{
+    text-align: center;
+    border:1px solid black;
+}
+tbody{
+    border:1px solid black;
+}
+tfoot{
+    border:1px solid black;
+}
+table tr td{
+    border:1px solid black;
+}
+th{
+    border:1px solid black;
+}
+label{
+    display: block;
 }

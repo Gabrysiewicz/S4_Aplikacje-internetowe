@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Form</title>
+        <meta name="description" content="">
+        <meta name="author" content="Kamil Gabrysiewicz">
+
+        <link rel='stylesheet' type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Szybki kurs HTML</h1>
+        <a href="#">Podstawowe znaczniki</a>
+        <a href="#">Tworzenie Tabel</a>
+        <a href="#">Budowa formularzy</a> 
+        <h2>Podstawowe znaczniki formularza HTML to:</h2>
+        <ul>
+            <li>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</li>
+            <li>&lt;input&gt; - znacznik umozliwia wstawienie różnych pól w zależności od wartość tego atrybutu type</li>
+            <li>&lt;select&gt; - pole formularza typu lista rozwijana</li>
+            <li>&lt;texarea&gt;- pole formularza typu obszar tekstowy</li>
+            <li>&lt;button&gt; - pole formularza typu przycisk</li>
+        </ul>
+        <h2>Przykładowy formularz HTML:</h2>
+        <form action="" method="post">
+            <label for="surname">Nazwisko</label>   <input type="text" name="surname">
+            <label for="age">Wiek</label>           <input type="value" name="age">
+            <label for="country">Kraj</label>
+            <select name="country">
+                <option>Polska</option>
+                <option>Ukraina</option>
+                <option>Niemcy</option>
+            </select>
+            <label for="email">Email</label>        <input type="email" name="email">
+        </form>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
