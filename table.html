@@ -9,27 +9,9 @@
         <meta name="author" content="Kamil Gabrysiewicz">
 
         <link rel='stylesheet' type="text/css" href="style.css">
+        <link rel='stylesheet' type="text/css" href="table.css">
     </head>
     <body>
-        <h1>Szybki kurs HTML</h1>
-        <a href="#">Podstawowe znaczniki</a>
-        <a href="#">Tworzenie Tabel</a>
-        <a href="#">Budowa formularzy</a> 
-        <h2>Podstawowe znaczniki HTML to:</h2>
-        <ul>
-            <li>&lt;hmtl&gt; - korzeń dokumentu</li>
-            <li>&lt;head&gt; - nagłówek strony z informacjami dla przeglądarek</li>
-            <li>&lt;body&gt; - właściwa treść dokumentu widoczna w oknie przeglądarki</li>
-            <li>&lt;div&gt;- element blokowy</li>
-            <li>&lt;p&gt; - akapit</li>
-            <li>&lt;ol&gt;, &lt;ul&gt;, &lt;li&gt; - elementy listy wypunktowanej lub numerowanej</li>
-            <li>&lt;img&gt; - obrazek</li>
-            <li>&lt;a&gt; - hiperłącze</li>
-        </ul>
-        <a href="#">HTML walidator</a><img src="w3c.png" alt="w3c logo"/>
-        <p>&copy;BP</p>
-
-        
         <h1>Przykładowa tabela HTML:</h1>
         
         <table>
@@ -40,9 +22,9 @@
             </thead>
             <tbody>
                 <tr><td>Java</td>   <td>1</td>  <td>2</td></tr>
-                <tr><td>C</td>      <td>2</td>  <td>1</td></tr>
+                <tr class="even"><td>C</td>      <td>2</td>  <td>1</td></tr>
                 <tr><td>Python</td> <td>3</td>  <td>5</td></tr>
-                <tr><td>C++</td>    <td>4</td>  <td>4</td></tr>
+                <tr class="even"><td>C++</td>    <td>4</td>  <td>4</td></tr>
                 <tr><td>C#</td>     <td>5</td>  <td>7</td></tr>
             </tbody>
             <tfoot>
@@ -53,7 +35,9 @@
                 </tr>
             </tfoot>
         </table>
-        
+        <footer>
+            &copy;BP
+        </footer>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

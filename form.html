@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Form</title>
+        <meta name="description" content="">
+        <meta name="author" content="Kamil Gabrysiewicz">
+
+        <link rel='stylesheet' type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Szybki kurs HTML</h1>
+        <a href="#">Podstawowe znaczniki</a>
+        <a href="#">Tworzenie Tabel</a>
+        <a href="#">Budowa formularzy</a> 
+        <h2>Podstawowe znaczniki formularza HTML to:</h2>
+        <ul>
+            <li>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</li>
+            <li>&lt;input&gt; - znacznik umozliwia wstawienie różnych pól w zależności od wartość tego atrybutu type</li>
+            <li>&lt;select&gt; - pole formularza typu lista rozwijana</li>
+            <li>&lt;texarea&gt;- pole formularza typu obszar tekstowy</li>
+            <li>&lt;button&gt; - pole formularza typu przycisk</li>
+        </ul>
+        <h2>Przykładowy formularz HTML:</h2>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td><label for="surname">Nazwisko</label></td>
+                    <td><input type="text" name="surname"></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Wiek</label></td>
+                    <td><input type="value" name="age"></td>
+                </tr>
+                <tr>
+                    <td><label for="country">Kraj</label></td>
+                    <td><select name="country">
+                            <option value="pl">Polska</option>
+                            <option value="ua">Ukraina</option>
+                            <option value="ge">Niemcy</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email">
+                    </td>
+                </tr>
+            </table>
+            <h2>Zamawian tutorial z języka:</h2>
+            <input type="checkbox" value="php" name="php"><label for="php">PHP</label>
+            <input type="checkbox" value="c/c++" name="c/c++"><label for="c/c++">C/C++</label>
+            <input type="checkbox" value="Java" name="java"><label for="java">Java</label>
+       
+            <h2>Sposób zapłaty</h2>
+            <input type="radio" name="payment" value="eurocard"><label for="payment">eurocard</label>
+            <input type="radio" name="payment" value="visa"><label for="payment">visa</label>
+            <input type="radio" name="payment" value="przelew bankowy"><label for="payment">przelew bankowy</label>
+            <br>
+            <input type="submit" value="Wyślij">
+            <input type="reset" value="Anuluj">
+        </form>
+        <p>&copy;BP</p>
+
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

@@ -1,6 +1,23 @@
+:root{
+    --light-blue:#4ae;
+}
+
 html, body{
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color:burlywood;
+}
+body {
+    background: #4ae;
+    color:#000040;
+}
+h1, h2, footer {
+    background: #000040;
+    color: #8080ff;
+    text-align:center;
+}
+#menu{
+    background-color: white;
+}
+#content{
+    background-color: var(--light-blue);
 }

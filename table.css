@@ -1,0 +1,35 @@
+:root{
+    --light-yellow:rgb(233, 255, 107);
+    --navy-blue:rgb(20, 20, 100);
+}
+body {
+    background: #4ae;
+    color:#000040;
+}
+table{
+    background-color: var(--light-yellow);
+    text-align: center;
+    width: 94%;
+    /* margin:-2%; */
+    margin:-1% auto auto auto;
+    border: 1pt var(--navy-blue) solid;
+}
+thead, tfoot{
+    background-color: var(--navy-blue);
+    color:white;
+    font-size: 110%;
+    padding:5pt;
+}
+caption{
+    font-size: 120%;
+    font-weight: bold;
+}
+td, th{
+    border:1pt solid var(--navy-blue)
+}
+tfoot a{
+    color:white;
+}
+.even{
+    background-color: white;
+}
