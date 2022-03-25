@@ -2,7 +2,9 @@
     --font-size-global:100%;
     --font-size-menu:160%;
     --font-size-submenu:90%;
-    --font-size-guitars:160%;
+    --font-size-guitars:220%;
+    --font-size-amps:220%;
+    --font-size-learning:220%;
     --font-size-footer:180%;
     --font-size-copy:80%;
     --menu-padding:1%;
@@ -71,18 +73,65 @@ main{
     position: absolute;
     top:0;
 }
-#guitars{
+/* #choose{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     height: 100%;
+} */
+#guitars{
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-guitars);
     box-shadow: inset 0 0 1px 1px rgb(255, 230, 0);
+}
+#guitars p{
+    padding:0 10%;
+    text-align: center;
+}
+#amps{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-amps);
+}
+#amps p{
+    padding:10% 10%;
+    text-align: center;
+    flex-basis: 100%;
+    box-shadow: inset 0 0 1px 1px white;
+}
+#amps img{
+    width: 33%;
+    height:100%;
+    font-size: var(--font-size-amps);
+}
+#learning{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-amps);
+}
+#learning p{
+    padding:10% 10%;
+    text-align: center;
+    flex-basis: 100%;
+    box-shadow: inset 0 0 1px 1px white;
+}
+#learning div{
+    display: flex;
+    justify-content: space-around;
+}
+#learning img{
+    width: 500px;
+    height: 500px;
+    font-size: var(--font-size-amps);
 }
 .exhibition{
     display: flex;
     align-items: center;
     flex-basis: 100%;
 }
-/* odd */
+/* odd
 .exhibition:nth-child(2n-1){
     background-color: #000;
 }
@@ -92,7 +141,7 @@ main{
 .exhibition:nth-child(2n-1) p{
     order:2;
 }
-/* even */
+/* even
 .exhibition:nth-child(2n){
     background-color: #222;
 }
@@ -112,7 +161,7 @@ main{
     font-size: var(--font-size-guitars);
     text-align: center;
     box-shadow: inset 0 0 1px 1px pink;
-}
+}  */
 .breaker{
     height:500px;
     /* position: relative; */
