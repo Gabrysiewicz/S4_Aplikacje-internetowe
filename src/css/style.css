@@ -3,9 +3,13 @@
     --font-size-global:100%;
     --font-size-menu:160%;
     --font-size-submenu:90%;
-    --font-size-guitars:220%;
+    --font-size-guitars:4.5vmin;
+    --font-size-guitars-lm:40px;
+    --font-size-guitars-m:4vmin;
+    --font-size-guitars-s:3vmin;
     --font-size-amps:220%;
     --font-size-amps-desc:170%;
+    --font-size-amps-desc-m:100%;
     --font-size-learning:220%;
     --font-size-learning-desc:170%;
     --font-size-footer:180%;
@@ -110,8 +114,8 @@ main{
 }
 #slider{
     z-index: 1;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     /* background-size: 100%; */
     background-size: cover;
@@ -119,11 +123,14 @@ main{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_12.jpg);
     /* box-shadow: inset 0 0 1px 1px red; */
 }
+article{
+    height: 100%;
+}
 #guitars{
     display: flex;
     align-items: center;
     font-size: var(--font-size-guitars);
-    box-shadow: inset 0 0 1px 1px rgb(255, 230, 0);
+    /* box-shadow: inset 0 0 1px 1px rgb(255, 230, 0); */
 }
 #guitars p{
     padding:0 10%;
@@ -136,7 +143,7 @@ main{
     font-size: var(--font-size-amps);
 }
 #amps p{
-    padding:10% 10%;
+    padding:10% 5%;
     text-align: center;
     flex-basis: 100%;
     box-shadow: inset 0 0 1px 1px white;
@@ -219,9 +226,10 @@ main{
 .breaker{
     height:500px;
     /* position: relative; */
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position-x: center;
     background-position-y: center;
     box-shadow: inset 0 0 1px 1px purple;
 }
@@ -303,9 +311,6 @@ footer p{
         top: 0;
         width: 100%;
     }
-    #logo{
-        
-    }
     #logo:hover{
         cursor: pointer;
     }
@@ -314,20 +319,15 @@ footer p{
         flex-direction: column;
         width: 100%;
         text-align: center;
-        
-    }
-    .menu-item{
-        
     }
     .roller{
         visibility: visible;
     }
     .sub-list{
-        /* position: relative; */
         width: 100%;
     }
-    .menu-item:hover > .sub-list{
-        /* display: none; */
+    #guitars p{
+        font-size: var(--font-size-guitars-s);
     }
 }
 @media (min-width:641px)  {
@@ -335,12 +335,30 @@ footer p{
         visibility: visible !important; 
     }
 }
-@media (min-width:961px)  {/* tablet, landscape iPad, lo-res laptops ands desktops */ 
-
+@media (max-width:961px)  {/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    #guitars p{
+        font-size: var(--font-size-guitars-m);
+    }
+    #img-amps{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    #img-amps div{
+        flex-basis: 100%;
+    }
+    #img-amps img{
+        width: 80%;
+        height: 500px;
+    }
+    .amps-desc{
+        font-size: var(--font-size-amps-desc-m);
+    }
 }
 @media (min-width:1025px) {/* big landscape tablets, laptops, and desktops */ 
 
 }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ 
-
+@media (max-width:1281px) { /* hi-res laptops and desktops */ 
+    /* #guitars p{
+        font-size: var(--font-size-guitars-lm);
+    } */
 }
