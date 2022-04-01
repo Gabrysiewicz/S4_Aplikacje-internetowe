@@ -1,0 +1,48 @@
+:root{
+    --bgColor-odd:#fff;
+    --bgColor-even:#000;
+    --color-guitar-lore:#fff;
+    --color-odd:#000;
+    --color-even:#fff;
+}
+#slider{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/amp/BOSS_wallpaper_4.jpg);
+}
+/* odd */
+.exhibition:nth-child(2n-1){
+    background-color: var(--bgColor-odd);
+    color: var(--color-odd);
+}
+.exhibition:nth-child(2n-1) img{
+    order:1;
+}
+.exhibition:nth-child(2n-1) p{
+    order:2;
+}
+/* even */
+.exhibition:nth-child(2n){
+    background-color: var(--bgColor-even);
+    color: var(--color-even);
+}
+.exhibition:nth-child(2n) img{
+    order:2;
+}
+.exhibition:nth-child(2n) p{
+    order:1;
+}
+.exhibition img{
+    padding:5%;
+    height:500px;
+    width:33%;
+}
+.exhibition p{
+    padding:5%;
+    font-size: var(--font-size-guitars);
+    text-align: center;
+    box-shadow: inset 0 0 1px 1px pink;
+} 
+#digital-exhibition img{
+    transform: scaleX(-1);
+}

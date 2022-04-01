@@ -1,16 +1,31 @@
 :root{
+    --font-family:'Times New Roman', Times, serif;
     --font-size-global:100%;
     --font-size-menu:160%;
     --font-size-submenu:90%;
     --font-size-guitars:220%;
     --font-size-amps:220%;
+    --font-size-amps-desc:170%;
     --font-size-learning:220%;
+    --font-size-learning-desc:170%;
     --font-size-footer:180%;
     --font-size-copy:80%;
     --menu-padding:1%;
 
+    --bgColor-body:rgb(238, 238, 238);
+    --bgColor-nav:rgba(0,0,0,0.5);
+    --bgColor-nav-hover:rgba(0,0,0,0.8);
+    --bgColor-footer: rgb(0, 0, 0);
+    --shadow-color-nav:#333;
+    --shadow-color-sublist:#555;
+    --shadow-color-amps-desc: rgb(0, 0, 0);
+    --shadow-color-learning-desc: rgb(255, 255, 255);
+    --color-body:rgb(39, 39, 39);
+    --color-nav:white;
+    --color-amps-desc: #fff;
+    --color-learning-desc: rgb(15, 15, 15);
 
-
+    --color-footer: rgb(255, 255, 255);
 
 
 }
@@ -20,66 +35,90 @@
 }
 html, body{
     height: 100%;
-    background-color: #000;
-    color:burlywood;
+    background-color: var(--bgColor-body);
+    color: var(--color-body);
     font-size: var(--font-size-global);
+    font-family: var(--font-family);
+}
+a{
+    text-decoration: none;
 }
 nav{
+    display: flex;
+    position: fixed;
+    z-index: 100;
     width: 100%;
+    color: var(--color-nav);
     font-size: var(--font-size-menu);
+    /* box-shadow: inset 0 0 1px 1px red; */
+}
+#logo{
+    width: 50px;
+    height: 50px;
 }
 nav ul{
     list-style-type: none;
+}
+nav a{
+    color: var(--color-nav);
 }
 #menu{
     display: flex;
     width: 100%;
     text-align: center;
-    box-shadow: inset 0 0 1px 1px red;
+}
+.roller{
+    visibility: hidden;
+    margin: 0 0 0 5px;
 }
 .menu-item{
     flex-basis: 100%;
     z-index: 99;
     box-sizing: border-box;
     padding: var(--menu-padding);
-    box-shadow: inset 0 0 1px 1px green;
+    font-weight: bold;
+    background-color: var(--bgColor-nav);
+    /* box-shadow: inset 0 0 1px 1px green; */
+}
+.menu-item:hover{
+    background-color: var(--bgColor-nav-hover);
+    box-shadow: 0 5px 100px 1px var(--shadow-color-nav);
 }
 .sub-list{
     position: absolute;
     visibility: hidden;
-    margin:var(--menu-padding) 0 0 calc( var(--menu-padding) * -1);
-    width:20%;
+    margin: var(--menu-padding) 0 0 calc( var(--menu-padding) * -2);
+    width: 20%;
     font-size: var(--font-size-submenu);
-    box-shadow: inset 0 0 1px 1px blue;
+    /* box-shadow: inset 0 0 1px 1px blue; */
 }
-.sub-list-item{
-    box-shadow: inset 0 0 1px 1px rgb(53, 53, 53);
+.sub-list-item:hover{
+    box-shadow: 0 0 10px 1px var(--shadow-color-sublist);
+}
+.sub-list-item:nth-child(2n){
+    background-color: var(--bgColor-nav);
+}
+.sub-list-item:nth-child(2n-1){
+    background-color: var(--bgColor-nav-hover);
 }
 .menu-item:hover > .sub-list{
-    visibility: visible;
+    /* visibility: visible !important;  */
 }
 main{
     width: 100%;
+    height: 100%;
 }
 #slider{
-    /* position: absolute; */
-    /* top:0; */
     z-index: 1;
     width:100%;
     height:100%;
-    box-shadow: inset 0 0 1px 1px red;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-size: cover;
+    background-position: center;
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_12.jpg);
+    /* box-shadow: inset 0 0 1px 1px red; */
 }
-#slider img{
-    position: absolute;
-    top:0;
-}
-/* #choose{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-} */
 #guitars{
     display: flex;
     align-items: center;
@@ -92,6 +131,7 @@ main{
 }
 #amps{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     font-size: var(--font-size-amps);
 }
@@ -101,67 +141,81 @@ main{
     flex-basis: 100%;
     box-shadow: inset 0 0 1px 1px white;
 }
-#amps img{
-    width: 33%;
-    height:100%;
-    font-size: var(--font-size-amps);
+#img-amps{
+    display: flex;
+    justify-content:space-around;
+    flex-basis: 100%;
+}
+#img-amps div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 33.3%;
+}
+#img-amps div:hover > .amps-desc{
+    visibility: visible;
+}
+.amps-desc{
+    position: absolute;
+    visibility: hidden;
+    z-index: 50;
+    color: var(--color-amps-desc);
+    font-size: var(--font-size-amps-desc);
+    text-shadow: 0 0 10px var(--shadow-color-amps-desc);
+}
+#img-amps img{
+    width: 100%;
+    height: 100%;
+}
+#amps img:hover{
+    filter: blur(6px);
 }
 #learning{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
-    font-size: var(--font-size-amps);
+    font-size: var(--font-size-learning);
 }
 #learning p{
     padding:10% 10%;
     text-align: center;
     flex-basis: 100%;
-    box-shadow: inset 0 0 1px 1px white;
 }
-#learning div{
+#img-learning{
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
+    flex-basis: 100%;
 }
-#learning img{
-    width: 500px;
-    height: 500px;
-    font-size: var(--font-size-amps);
+#img-learning div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 33.3%;
+}
+#img-learning div:hover > .learning-desc{
+    visibility: visible;
+}
+.learning-desc{
+    position: absolute;
+    visibility: hidden;
+    z-index: 50;
+    color: var(--color-learning-desc);
+    font-size: var(--font-size-learning-desc);
+    text-shadow: 0 0 10px var(--shadow-color-learning-desc);
+}
+#img-learning img{
+    width: 100%;
+    height: 100%;
+}
+#learning img:hover{
+    filter: blur(6px);
 }
 .exhibition{
     display: flex;
     align-items: center;
     flex-basis: 100%;
 }
-/* odd
-.exhibition:nth-child(2n-1){
-    background-color: #000;
-}
-.exhibition:nth-child(2n-1) img{
-    order:1;
-}
-.exhibition:nth-child(2n-1) p{
-    order:2;
-}
-/* even
-.exhibition:nth-child(2n){
-    background-color: #222;
-}
-.exhibition:nth-child(2n) img{
-    order:2;
-}
-.exhibition:nth-child(2n) p{
-    order:1;
-}
-.exhibition img{
-    padding:5%;
-    height:500px;
-    width:33%;
-}
-.exhibition p{
-    padding:5%;
-    font-size: var(--font-size-guitars);
-    text-align: center;
-    box-shadow: inset 0 0 1px 1px pink;
-}  */
+
 .breaker{
     height:500px;
     /* position: relative; */
@@ -172,10 +226,16 @@ main{
     box-shadow: inset 0 0 1px 1px purple;
 }
 #curt{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/background_acoustic_4.jpg);
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_acoustic_4.jpg);
+}
+#metallica{
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_metallica_2.jpg);
+}
+#classicals{
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical.jpg);
 }
 #other{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/background_metallica_2.jpg);
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_metallica_2.jpg);
 }
 #amps{
     height:1000px;
@@ -194,22 +254,12 @@ footer{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    padding: 5% 0 0 0;
     font-size: var(--font-size-footer);
     text-transform: capitalize;
-    box-shadow: inset 0 0 1px 1px rgb(255, 0, 0);
+    box-shadow: inset 0 50px 100px -100px rgb(0, 0, 0);
 }
 footer ul{
     list-style-type: none;
-}
-#social{
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 100%;
-}
-#social img{
-    margin: 10% 0 10% 0;
-    width:20%;
 }
 #additional{
     flex-basis: 50%;
@@ -217,15 +267,80 @@ footer ul{
 #terms{
     flex-basis: 50%;
 }
+#additional, #terms{
+    margin:3% 0;
+}
+#social{
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+}
+#social li:nth-child(2n-1){
+    background-color: var(--bgColor-nav-hover);
+}
+#social li:nth-child(2n){
+    /* background-color: rgb(255, 255, 255); */
+}
+#social img{
+    margin: 10% 0 10% 0;
+    width:20%;
+}
 footer p{
     width: 100%;
     font-size: var(--font-size-copy);
-    box-shadow: inset 0 0 1px 1px green;
+    background-color: var(--bgColor-footer);
+    color: var(--color-footer)
 }
 
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    nav{
+        flex-direction: column;
+        align-items: center;
+        position:fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    #logo{
+        
+    }
+    #logo:hover{
+        cursor: pointer;
+    }
+    #menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        
+    }
+    .menu-item{
+        
+    }
+    .roller{
+        visibility: visible;
+    }
+    .sub-list{
+        /* position: relative; */
+        width: 100%;
+    }
+    .menu-item:hover > .sub-list{
+        /* display: none; */
+    }
+}
+@media (min-width:641px)  {
+    .menu-item:hover > .sub-list{
+        visibility: visible !important; 
+    }
+}
+@media (min-width:961px)  {/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+}
+@media (min-width:1025px) {/* big landscape tablets, laptops, and desktops */ 
+
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+
+}

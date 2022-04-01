@@ -3,17 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Final Project</title>
+        <title>Amps</title>
         <meta name="description" content="Gitars, Amp, Efects, String, ...">
         <meta name="author" content="Kamil Gabrysiewicz 95400">
-
         <link rel='stylesheet' type="text/css" href="src/css/style.css">
+        <link rel='stylesheet' type="text/css" href="src/css/amps.css">
     </head>
     <body>
         <nav>
-            <img src="src/img/logo_w.png" id="logo"/>
             <ul id="menu">
-                <li class="menu-item"><a href="index.html">Guitars</a><img src="src/img/roller.png" width="20" height="15" class="roller" onclick="rollSublist(0)"/>
+                <li class="menu-item"><a href="index.html">Guitars</a>
                     <ul class="sub-list">
                         <li class="sub-list-item">Classical</li>
                         <li class="sub-list-item">Electro-Classical</li>
@@ -22,14 +21,14 @@
                         <li class="sub-list-item">Electric</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="amps.html">Amps</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(1)"/>
+                <li class="menu-item"><a href="amps.html">Amps</a>
                     <ul class="sub-list">
                         <li class="sub-list-item">Tube / Valve</li>
                         <li class="sub-list-item">Solid state</li>
                         <li class="sub-list-item">Digital</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="effects.html">Effects</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(2)"/>
+                <li class="menu-item"><a href="effects.html">Effects</a>
                     <ul class="sub-list">
                         <li class="sub-list-item">Wah-Wah</li>
                         <li class="sub-list-item">Compersor</li>
@@ -46,7 +45,7 @@
                         <li class="sub-list-item">Reverb</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="accesories.html">Accesories</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(3)"/>
+                <li class="menu-item"><a href="accesories.html">Accesories</a>
                     <ul class="sub-list">
                         <li class="sub-list-item">Strings</li>
                         <li class="sub-list-item">Picks</li>
@@ -57,7 +56,7 @@
                         <li class="sub-list-item">Oils</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="learning.html">Learning</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(4)"/>
+                <li class="menu-item"><a href="learning.html">Learning</a>
                     <ul class="sub-list">
                         <li class="sub-list-item">Notes</li>
                         <li class="sub-list-item">Chords</li>
@@ -86,61 +85,24 @@
             -->
         </section>
         <main>
-            <article id="guitars">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nunc et mi faucibus, sit amet lacinia arcu dictum. Duis laoreet sit amet ipsum nec hendrerit. Sed a pretium odio. Vestibulum in iaculis velit. Aliquam sed turpis pellentesque, consectetur lacus vitae, luctus odio. Phasellus arcu ligula, imperdiet eu nulla at, hendrerit malesuada sapien. Mauris dictum est neque, efficitur hendrerit mi consectetur et. Mauris interdum eros eu blandit vestibulum. Aliquam ante quam, bibendum nec orci in, vestibulum euismod ex. Mauris dapibus vitae nulla eget aliquet. Maecenas lacinia, nisl id eleifend condimentum, augue mi tristique urna, id efficitur turpis orci in eros. Vivamus imperdiet laoreet fringilla. Aenean commodo pellentesque sapien, in scelerisque eros molestie id.
-                </p>
+            <section id="guitar-lore">
+                <div id="tube-exhibition" class="exhibition" >
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a augue sapien. Integer tempor non orci pulvinar luctus. Duis faucibus, arcu luctus tempus ultricies, leo nisi ultrices orci, vel cursus erat sapien sed lacus. Sed at lorem et urna porttitor aliquet. Mauris euismod accumsan dolor. In vehicula tincidunt tellus a iaculis. Nullam ac risus scelerisque, dictum felis at, volutpat felis. Donec finibus tincidunt mattis. Praesent eu elit non nisl tincidunt condimentum eu at metus. Suspendisse ac nunc sit amet risus elementum semper. Phasellus facilisis nisl vitae leo iaculis, vel posuere lacus gravida. Duis eget diam orci. In et dolor in risus elementum facilisis. Cras accumsan vehicula lobortis. Sed elementum tristique sapien id dignissim. Suspendisse semper facilisis vulputate.
+                    </p>
+                    <img src="src/img/amp/tube_exhibition.jpg">
+                </div>
+                <div id="solid-exhibition" class="exhibition">
+                    <p>Sed a ullamcorper purus. Nullam mollis lacus sit amet odio elementum tempus quis eget est. Nullam elit sem, venenatis euismod efficitur non, maximus id mauris. Quisque ornare pellentesque est, id eleifend sem pellentesque nec. Phasellus venenatis mollis nisl. Phasellus vitae turpis rutrum, pharetra neque non, pulvinar augue. Etiam dapibus pretium velit eu ullamcorper. Donec a ligula aliquam, ullamcorper nisl dignissim, tincidunt dolor. Sed suscipit tempor sapien eget eleifend. Morbi id dapibus metus. Praesent id purus odio. Aenean varius tristique elit nec ullamcorper.</p>
+                    <img src="src/img/amp/marshall_wallpaper_4.webp">
+                </div>
+                <div id="digital-exhibition" class="exhibition">
+                    <p>Duis faucibus, nulla ac faucibus ullamcorper, felis tellus tempor arcu, et feugiat felis dui ullamcorper purus. Sed sollicitudin enim vel magna mollis, non auctor purus rutrum. Fusce suscipit pulvinar interdum. Nulla sagittis erat a nisl blandit, semper tincidunt nibh cursus. Integer accumsan vulputate nulla, sit amet imperdiet ante lobortis sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque tincidunt tincidunt libero non venenatis. Pellentesque malesuada id est porttitor porttitor. Sed tempus erat vel interdum auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet leo at lacus posuere efficitur. Donec et nisi eleifend, sagittis odio eu, aliquam turpis. Praesent ornare aliquam iaculis. Nunc elementum velit leo, eget placerat tellus accumsan non. Cras fringilla elit odio, vitae sollicitudin quam luctus in. Donec ante mi, viverra ut blandit non, molestie eget metus.</p>
+                    <img src="src/img/amp/kemper.jpeg">
+                </div>
             </article>
-
-            <section class="breaker" id="curt">
-                <!-- Single fixed image -->
-            </section>
-
-            <article id="amps">
-                <p>
-                    Duis ut metus eget diam tempor rhoncus. Proin vehicula leo justo, ac euismod sem rhoncus vitae. Sed congue felis sed erat facilisis, sagittis pellentesque velit viverra. Duis in arcu a nunc tempor varius volutpat at neque. Mauris maximus ultrices turpis vel fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi tempor metus nec tellus consequat, eget rhoncus turpis pharetra. Ut vulputate turpis nec neque lobortis lacinia. Donec vel porttitor leo, pretium mattis magna.
-                </p>
-                <section id="img-amps">
-                    <div id="tube-amp">
-                        <h1 class="amps-desc">Tube</h1>
-                        <img src="src/img/amp/Orange_wallpaper_.jpg">
-                    </div>
-                    <div id="solid-amp">
-                        <h1 class="amps-desc">Solid State</h1>
-                        <img src="src/img/amp/marshall_wallpaper_2.jpg">
-                    </div>
-                    <div id="digital-amp">
-                        <h1 class="amps-desc">Digital</h1>
-                        <img src="src/img/amp/kemper.jpeg">
-                    </div>
+                <section class="breaker" id="classicals">
+                    <!-- Single fixed image -->
                 </section>
-            </article>
-
-            <section class="breaker" id="metallica">
-                <!-- Single fixed image -->
-            </section>
-
-            <article id="learning">
-                <p>
-                    Duis ut metus eget diam tempor rhoncus. Proin vehicula leo justo, ac euismod sem rhoncus vitae. Sed congue felis sed erat facilisis, sagittis pellentesque velit viverra. Duis in arcu a nunc tempor varius volutpat at neque. Mauris maximus ultrices turpis vel fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi tempor metus nec tellus consequat, eget rhoncus turpis pharetra. Ut vulputate turpis nec neque lobortis lacinia. Donec vel porttitor leo, pretium mattis magna.
-                </p>
-                <section id="img-learning">
-                    <div id="learning-notes">
-                        <h1 class="learning-desc">Notes</h1>
-                        <img src="src/img/learning/notes_2.jpeg">
-                    </div>
-                    <div id="learning-scales">
-                        <h1 class="learning-desc">Scales</h1>
-                        <img src="src/img/guitar/guitarist.jpg">
-                    </div>
-                    <div id="learning-chords">
-                        <h1 class="learning-desc">Chords</h1>
-                        <img src="src/img/learning/chords_2.png">
-                    </div>
-                </section>
-            </article>
-            <section class="breaker" id="classicals">
-                <!-- Single fixed image -->
             </section>
             <footer>
                 <ul id="additional">
@@ -165,7 +127,9 @@
                 <p>All right restricted &copy;</p>
             </footer>
         </main>
+    
         
         <script type="text/javascript" src="src/javascript/script.js"></script>
+        <script type="text/javascript" src="src/javascript/amps.js"></script>
     </body>
 </html>
