@@ -13,18 +13,12 @@ const maxHeight = window.innerHeight;
 const mobileWidth = 641;
 // menuStatus == 1 : visible
 // menuStatus == 0 : hidden
-window.addEventListener('load', () => {
-    if(window.innerWidth > mobileWidth){
-        showMenu();
-        sessionStorage.setItem("menuStatus", 1);
-    }else{
-        hideMenu();
-        showRollers();
-        logo.src = "src/img/logo_w_rotate.png";
-        sessionStorage.setItem("menuStatus", 0);
-    }
-    logo.style.height = `${menu.style.height}px`;
-})
+if(window.innerWidth > mobileWidth){
+    sessionStorage.setItem("menuStatus", 1);
+}else{
+    sessionStorage.setItem("menuStatus", 0);
+}
+
 
 window.addEventListener('resize', () => {
     if(window.innerWidth > mobileWidth){

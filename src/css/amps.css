@@ -7,8 +7,11 @@
 }
 #slider{
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/amp/BOSS_wallpaper_4.jpg);
+}
+.exhibition{
+    display: flex;
 }
 /* odd */
 .exhibition:nth-child(2n-1){
@@ -41,8 +44,56 @@
     padding:5%;
     font-size: var(--font-size-guitars);
     text-align: center;
-    box-shadow: inset 0 0 1px 1px pink;
+
 } 
+#solid-exhibition p{
+    box-shadow: inset 0 0 1px 1px orange;
+}
 #digital-exhibition img{
     transform: scaleX(-1);
 }
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    
+}
+@media (max-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    .exhibition{
+        flex-direction: column;
+    }
+    .exhibition:nth-child(2n-1){
+        background-color: var(--bgColor-odd);
+        color: var(--color-odd);
+    }
+    .exhibition:nth-child(2n-1) img{
+        order:1;
+    }
+    .exhibition:nth-child(2n-1) p{
+        order:2;
+    }
+    /* even */
+    .exhibition:nth-child(2n){
+        background-color: var(--bgColor-even);
+        color: var(--color-even);
+    }
+    .exhibition:nth-child(2n) img{
+        order:1;
+    }
+    .exhibition:nth-child(2n) p{
+        order:2;
+    }
+    .exhibition img{
+        order:1;
+        width:100%;
+        height: 100%;
+    }
+    .exhibition p{
+        order:2;
+        padding:5%;
+        font-size: var(--font-size-guitars);
+        text-align: center;
+        box-shadow: inset 0 0 1px 1px pink;
+    } 
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }

@@ -11,7 +11,9 @@
     </head>
     <body>
         <nav>
-            <img src="src/img/logo_w.png" id="logo"/>
+            <div>
+                <img src="src/img/logo_w.png" id="logo"/>
+            </div>
             <ul id="menu">
                 <li class="menu-item"><a href="index.html">Guitars</a><img src="src/img/roller.png" width="20" height="15" class="roller" onclick="rollSublist(0)"/>
                     <ul class="sub-list">
@@ -22,14 +24,14 @@
                         <li class="sub-list-item">Electric</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="amps.html">Amps</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(1)"/>
+                <li class="menu-item"><a href="amps.html">Amps</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="rollSublist(1)"/>
                     <ul class="sub-list">
                         <li class="sub-list-item">Tube / Valve</li>
                         <li class="sub-list-item">Solid state</li>
                         <li class="sub-list-item">Digital</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="effects.html">Effects</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(2)"/>
+                <li class="menu-item"><a href="effects.html">Effects</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="rollSublist(2)"/>
                     <ul class="sub-list">
                         <li class="sub-list-item">Wah-Wah</li>
                         <li class="sub-list-item">Compersor</li>
@@ -46,7 +48,7 @@
                         <li class="sub-list-item">Reverb</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="accesories.html">Accesories</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(3)"/>
+                <li class="menu-item"><a href="accesories.html">Accesories</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="rollSublist(3)"/>
                     <ul class="sub-list">
                         <li class="sub-list-item">Strings</li>
                         <li class="sub-list-item">Picks</li>
@@ -57,7 +59,7 @@
                         <li class="sub-list-item">Oils</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="learning.html">Learning</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="roll(4)"/>
+                <li class="menu-item"><a href="learning.html">Learning</a><img src="src/img/roller.png" width="20" height="15" class="roller"  onclick="rollSublist(4)"/>
                     <ul class="sub-list">
                         <li class="sub-list-item">Notes</li>
                         <li class="sub-list-item">Chords</li>
@@ -100,7 +102,7 @@
                 <p>
                     Duis ut metus eget diam tempor rhoncus. Proin vehicula leo justo, ac euismod sem rhoncus vitae. Sed congue felis sed erat facilisis, sagittis pellentesque velit viverra. Duis in arcu a nunc tempor varius volutpat at neque. Mauris maximus ultrices turpis vel fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi tempor metus nec tellus consequat, eget rhoncus turpis pharetra. Ut vulputate turpis nec neque lobortis lacinia. Donec vel porttitor leo, pretium mattis magna.
                 </p>
-                <section id="img-amps">
+                <div id="img-amps">
                     <div id="tube-amp">
                         <h1 class="amps-desc">Tube</h1>
                         <img src="src/img/amp/Orange_wallpaper_.jpg">
@@ -113,7 +115,7 @@
                         <h1 class="amps-desc">Digital</h1>
                         <img src="src/img/amp/kemper.jpeg">
                     </div>
-                </section>
+                </div>
             </article>
 
             <section class="breaker" id="metallica">
@@ -124,7 +126,7 @@
                 <p>
                     Duis ut metus eget diam tempor rhoncus. Proin vehicula leo justo, ac euismod sem rhoncus vitae. Sed congue felis sed erat facilisis, sagittis pellentesque velit viverra. Duis in arcu a nunc tempor varius volutpat at neque. Mauris maximus ultrices turpis vel fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi tempor metus nec tellus consequat, eget rhoncus turpis pharetra. Ut vulputate turpis nec neque lobortis lacinia. Donec vel porttitor leo, pretium mattis magna.
                 </p>
-                <section id="img-learning">
+                <div id="img-learning">
                     <div id="learning-notes">
                         <h1 class="learning-desc">Notes</h1>
                         <img src="src/img/learning/notes_2.jpeg">
@@ -137,7 +139,7 @@
                         <h1 class="learning-desc">Chords</h1>
                         <img src="src/img/learning/chords_2.png">
                     </div>
-                </section>
+                </div>
             </article>
             <section class="breaker" id="classicals">
                 <!-- Single fixed image -->
