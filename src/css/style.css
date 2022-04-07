@@ -18,7 +18,7 @@
     --menu-padding:1%;
 
     --bgColor-body:rgb(238, 238, 238);
-    --bgColor-nav:rgba(0,0,0,0.5);
+    --bgColor-nav:rgba(0,0,0,0.4);
     --bgColor-nav-hover:rgba(0,0,0,0.8);
     --bgColor-footer: rgb(0, 0, 0);
     --shadow-color-nav:#333;
@@ -120,6 +120,18 @@ nav a{
 main{
     width: 100%;
     height: 100%;
+}
+#slider-text{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: 10;
+    width: 50%;
+    text-align: justify;
+    padding: 0 0 0 2%;
+    font-size: 300%;
+    color: var(--color-nav);
+    /* box-shadow: inset 0 0 1px 1px red; */
 }
 #slider{
     z-index: 1;
