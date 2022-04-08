@@ -1,0 +1,49 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+p:nth-child(3n){
+    letter-spacing: 10pt;
+}
+p:nth-child(odd){
+    background-color:yellow;
+}
+p em:last-child{
+    color:blue;
+}
+div :nth-child(5){
+    border: 10px dotted blue;
+    border-right: 0;
+}
+p:nth-child(2n){
+    font-style: italic;
+}
+em:nth-of-type(2){
+    /* box-shadow: inset 0 0 1px 1px red; */
+    text-decoration: underline;
+}
+img[src$="obrazek.jpg"]{
+    border-left: 3px solid green;
+    border-right: 3px solid green;
+}
+#third strong{
+    font-size: 20pt;
+}
+a[title]{
+    letter-spacing: 6px;
+}
+h1, h2, h3{
+    margin: 0 0 0 50px;
+}
+ul li:nth-child(2n), ol li:nth-child(2n){
+    background-color: #c00;
+}
+p[name$="y"]{
+    margin: 15px 0 0 0;
+}
+a[title*="em"]{
+    border-top: 4px solid orange;
+}
+ul ~ p, ol ~ p{
+    color:orange;
+}
