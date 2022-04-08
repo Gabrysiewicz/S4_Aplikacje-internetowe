@@ -23,7 +23,7 @@ article p{
     display: flex;
     align-items: center;
     width: 60%;
-    font-size: 200%;
+    font-size: 250%;
     padding : 5%;
     box-shadow: inset 0 0 1px 1px red;
 }
@@ -84,4 +84,20 @@ article p{
 }
 #reverb{
     
+}
+#effect-order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#effect-order img{
+    order:2;
+    height: 90%;
+}
+#effect-order h1{
+    height: 10%;
+    font-size: 270%;
+    padding: 2% 0 0 0;
+
+    box-shadow: inset 0 0 1px 1px red;
 }

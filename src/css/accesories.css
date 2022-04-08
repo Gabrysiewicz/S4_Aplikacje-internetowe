@@ -1,6 +1,74 @@
 main > section{
-    height: 100%;
+    /* height: 100%; */
 }
 #slider{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/accessories/picks3.jpg);
 }
+article{
+    display: flex;
+    padding: 1%;
+    box-shadow: inset 0 0 1px 1px red;
+}
+img{
+    width: 35%;
+}
+#cables{
+    display: flex;
+    width: 100%;
+    font-size: 200%;
+}
+#cables div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    padding: 2% 0;
+}
+#cables img{
+    width: 35%;
+}
+#cables thead{
+    background-color: rgba(219, 219, 131, 0.767);
+}
+#cables table{
+    margin:5% 0;
+    width: 80%;
+    text-align: center;
+    box-shadow: 3px 2px 11px 3px rgb(219, 219, 131);
+
+}
+#cables table tbody tr td:nth-child(3n - 2){
+    box-shadow: 1px 0 10px 1px rgb(219, 219, 131);
+}
+#strings{
+    flex-direction: column;
+}
+#strings div{
+    display: flex;
+    width: 100%;
+    font-size: 170%;
+}
+#strings div:first-child{
+    flex-direction: column;
+    text-align: center;
+}
+#strings div:nth-child(2){
+    align-items: center;
+    justify-content: space-between;
+}
+#strings table{
+    padding: 2%;
+}
+#strings table tr th{
+    background-color: rgb(163, 163, 163);
+}
+#strings table tr td{
+    box-shadow: 0 0 7px 1px rgb(163, 163, 163);
+}
+#strings img{
+    width:33%;
+    height: 500px;
+    box-shadow:  0 0 1px 1px red;
+}
+
+
