@@ -1,0 +1,46 @@
+body{
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#hidden-text{
+    position: absolute;
+    visibility: hidden;
+    margin: -25px 0 0 23%;
+    font-size: 80%;
+}
+input[type=button]{
+    width: 5%;
+    font-size: 1em;
+    margin-left: 15%;
+    background-color: #EEE;
+    border:1px solid grey;
+    box-shadow: 0 0 10px -1px grey;
+}
+input[type=button]:hover{
+    /* width: 5%; */
+    font-size: 1em;
+    /* margin-left: 15%; */
+    background-color: #EEE;
+    border:1px solid grey;
+    box-shadow: 0 0 10px 2px grey;
+}
+#math{
+    margin-left: 30%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column
+}
+h1{
+    font-weight:bolder
+}
+h1 + p{
+    font-size: 120%;
+}
+#three{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+h1:hover + #hidden-text{
+    visibility: visible;
+}
