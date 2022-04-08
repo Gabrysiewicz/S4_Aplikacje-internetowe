@@ -1,8 +1,56 @@
 html, body{
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color:burlywood;
+    color:#000;
+    font-size: 100%;
+}
+body > div{
+    z-index: 1;
+    margin:auto;
+    box-shadow: 2px 7px 11px 2px grey;
+    box-sizing: border-box;
+    width: 500px;
+    height: 600px;
+    border-radius: 50px;
+}
+form{
+    z-index: 1;
+    margin:auto;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 400px;
+}
+form > label{
+    margin:auto;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+input:focus::placeholder{
+    visibility: hidden;
+}
+.radio-label{
+    display: inline;
+}
+form > div:last-child{
+    display: flex;
+    justify-content: flex-end;
+    margin:20px 0 0 0 ;
+}
+input[type="submit"], input[type="reset"]{    
+    flex-basis:33%;
+    box-shadow: 2px 3px 7px 1px grey;
+    background-color: rgba(255,255,255, .5);
+}
+canvas{
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
