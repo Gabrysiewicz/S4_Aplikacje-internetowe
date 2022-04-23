@@ -1,6 +1,42 @@
-main > section{
-    height: 100%;
-}
+
 #slider{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/guitarist_2.jpeg);
+}
+#notes{
+
+}
+#note-slider{
+    box-shadow: 0 0 10px 1px grey;
+}
+#chords{
+    display: flex;
+    flex-direction: column;
+}
+#chords > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: inset 0 0 1px 1px green;
+}
+.chord-col{
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 1px 1px red;
+}
+#techniques{
+
+}
+#techniques ul h3{
+    text-align: left;
+    padding: 5% 0 0 5%;
+}
+#techniques ul p{
+    text-align: left;
+    padding-left: 10%;
+}
+main > section{
+    text-align: center;
+    font-size:200%;
+    padding: 5% 0;
 }

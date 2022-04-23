@@ -421,3 +421,28 @@ footer p{
         font-size: var(--font-size-guitars-lm);
     } */
 }
+
+@keyframes moveUp{
+    from{
+        transform:translateY(15%);
+        color:white;
+    }
+    to{
+        transform:translateY(0%);
+        color:var(--color-body);
+    }
+}
+@keyframes moveDown{
+    from{
+        transform:translateY(-15%);
+    }
+    to{
+        transform:translateY(0%);
+    }
+}
+p{
+    animation: moveUp 3s ease-out forwards;
+}
+#navbar{
+    animation: moveDown 3s ease-out forwards;
+}
