@@ -107,3 +107,21 @@ let rollSublist = (id) => {
         sublists[id].style.visibility = "hidden";
     }
 };
+
+let downScaleNav = 0;
+window.addEventListener('scroll', () => {
+    if( window.innerWidth > mobileWidth){
+        if(window.scrollY > window.innerHeight){
+            downScaleNav = 1;
+            nav.classList.add('ScaleDown');
+            nav.classList.remove('ScaleUp');
+        }
+        else{
+            if(downScaleNav == 1){
+                nav.classList.remove('ScaleDown');
+                nav.classList.add('ScaleUp');
+                downScaleNav = 0;
+            }
+        }
+    }
+})

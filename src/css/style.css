@@ -44,18 +44,23 @@ html, body{
     color: var(--color-body);
     font-size: var(--font-size-global);
     font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+ul{
+    list-style-type: none;
 }
 a{
     text-decoration: none;
 }
+/* START OF NAVBAR */
 nav{
+    user-select: none;
     display: flex;
     position: fixed;
     z-index: 100;
     width: 100%;
     color: var(--color-nav);
     font-size: var(--font-size-menu);
-    /* box-shadow: inset 0 0 1px 1px red; */
 }
 nav > div{
     background-color: var(--bgColor-nav);
@@ -91,11 +96,13 @@ nav a{
     padding: var(--menu-padding);
     font-weight: bold;
     background-color: var(--bgColor-nav);
-    /* box-shadow: inset 0 0 1px 1px green; */
 }
 .menu-item:hover{
     background-color: var(--bgColor-nav-hover);
-    box-shadow: 0 5px 100px 1px var(--shadow-color-nav);
+    box-shadow: 
+    0 5px 100px 1px var(--shadow-color-nav),
+    inset 0 0 10px 1px var(--shadow-color-nav);
+    transition: box-shadow .5s ease-in-out;
 }
 .sub-list{
     position: absolute;
@@ -103,10 +110,11 @@ nav a{
     margin: var(--menu-padding) 0 0 calc( var(--menu-padding) * -1);
     width: 20%;
     font-size: var(--font-size-submenu);
-    /* box-shadow: inset 0 0 1px 1px blue; */
 }
 .sub-list-item:hover{
     box-shadow: 0 0 10px 1px var(--shadow-color-sublist);
+    transition: box-shadow .2s ease-in-out;
+
 }
 .sub-list-item:nth-child(2n){
     background-color: var(--bgColor-nav);
@@ -117,12 +125,17 @@ nav a{
 .menu-item:hover > .sub-list{
     /* visibility: visible !important;  */
 }
+/* END OF NAVBAR */
 main{
     width: 100%;
     height: 100%;
 }
+main > article:first-child{
+    box-shadow: inset 0 10px 50px -1px grey;
+}
 #slider-text{
     position: absolute;
+    user-select: none;
     left: 0;
     top: 40%;
     z-index: 10;
@@ -131,18 +144,25 @@ main{
     padding: 0 0 0 2%;
     font-size: 300%;
     color: var(--color-nav);
-    /* box-shadow: inset 0 0 1px 1px red; */
 }
 #slider{
     z-index: 1;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    /* background-size: 100%; */
     background-size: cover;
     background-position: center;
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_12.jpg);
-    /* box-shadow: inset 0 0 1px 1px red; */
+}
+#override{
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,1);
+    animation: FadeOut 10s forwards;
 }
 #guitars{
     display: flex;
@@ -184,6 +204,7 @@ main{
 .amps-desc{
     position: absolute;
     visibility: hidden;
+    user-select: none;
     z-index: 50;
     color: var(--color-amps-desc);
     font-size: var(--font-size-amps-desc);
@@ -193,8 +214,9 @@ main{
     width: 100%;
     height: 100%;
 }
-#amps img:hover{
+#amps img:hover, #learning img:hover{
     filter: blur(6px);
+    transition: filter .5s ease
 }
 #learning{
     display: flex;
@@ -233,9 +255,9 @@ main{
     width: 100%;
     height: 100%;
 }
-#learning img:hover{
+/* #learning img:hover{
     filter: blur(6px);
-}
+} */
 .exhibition{
     display: flex;
     align-items: center;
@@ -261,8 +283,17 @@ main{
 #classicals{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical.jpg);
 }
-#other{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_metallica_2.jpg);
+#fender{
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/amp/Fender_wallpaper_3.jpg);
+}
+#effects{
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/effects3.jpg);
+}
+#estas{
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical_2.jpg);
+}
+#jurek{
+    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/jurek.jpg);
 }
 #amps{
     box-shadow: inset 0 0 1px 1px rgb(60, 255, 0);
@@ -276,6 +307,7 @@ main{
 #learning{
     box-shadow: inset 0 0 1px 1px rgb(200, 2, 250);
 }
+/* START OF FOOTER */
 footer{
     display: flex;
     flex-wrap: wrap;
@@ -306,15 +338,14 @@ footer ul{
 #social li:nth-child(2n-1){
     background-color: var(--bgColor-nav-hover);
 }
-#social li:nth-child(2n){
-    /* background-color: rgb(255, 255, 255); */
-}
 #social li:nth-child(2n-1):hover{
     background-color: rgb(196,196,196);
-    
 }
 #social li:nth-child(2n):hover{
-    background-color: rgb(196,196,196);
+    background-color: rgb(27, 26, 26);
+}
+#social li:hover{
+    transition: background-color 2s;
 }
 #social img{
     cursor: pointer;
@@ -327,7 +358,7 @@ footer p{
     background-color: var(--bgColor-footer);
     color: var(--color-footer)
 }
-
+/* END OF FOOTER */
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
 @media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
@@ -348,7 +379,6 @@ footer p{
         display:inline;
         width: 50px;
         height: 50px;
-        /* box-shadow: inset 0 0 1px 1px red; */
     }
     #logo:hover{
         cursor: pointer;
@@ -370,7 +400,6 @@ footer p{
         font-size: var(--font-size-guitars-s);
     }
     #social img{
-        /* margin: 10% 0 10% 0; */
         width:100%;
     }
 }
@@ -421,28 +450,62 @@ footer p{
         font-size: var(--font-size-guitars-lm);
     } */
 }
-
-@keyframes moveUp{
+@media (prefers-reduced-motion: no-preference) {
+    #slider-text{
+        animation: FadeIn 3s linear  forwards;
+    }
+    nav{
+        animation: moveDown 1s ease-out forwards;
+    }
+}
+/* Paragraphs */
+@keyframes FadeIn{
     from{
         transform:translateY(15%);
-        color:white;
+        color:rgb(0, 0, 0);
     }
     to{
         transform:translateY(0%);
-        color:var(--color-body);
+        color:var(--color-nav);
     }
 }
+/* Main slide */
+@keyframes FadeOut{
+    from{
+        background-color:rgba(0,0,0,1);
+    }
+    to{
+        background-color:rgba(0,0,0,0);
+    }
+}
+/* NAVBAR */
 @keyframes moveDown{
     from{
-        transform:translateY(-15%);
+        transform:translateY(-100%);
     }
     to{
         transform:translateY(0%);
     }
 }
-p{
-    animation: moveUp 3s ease-out forwards;
+.ScaleDown{
+    animation: ScaleDown 1s ease-in-out forwards;
 }
-#navbar{
-    animation: moveDown 3s ease-out forwards;
+@keyframes ScaleDown{
+    from{
+        transform: scale(1) translateY(0%);
+    }
+    to{
+        transform: scale(.8) translateY(-15%);
+    }
+}
+.ScaleUp{
+    animation: ScaleUp 1s ease-in-out forwards;
+}
+@keyframes ScaleUp{
+    from{
+        transform: scale(.8)  translateY(-15%);
+    }
+    to{
+        transform: scale(1)  translateY(0%);
+    }
 }

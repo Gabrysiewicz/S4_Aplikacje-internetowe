@@ -143,6 +143,7 @@ img{
 }
 #shape img:hover{
     transform: scale(1.1);
+    transition: transform 1.3s ease;
 }
 #belts{
     display: flex;
@@ -181,11 +182,9 @@ img{
     width: 19%;
     height: 450px;
 }
-#racks-img img:nth-child(2n-1):hover{
+#racks-img img:hover{
     box-shadow: 0 0 50px 10px grey;
-}
-#racks-img img:nth-child(2n):hover{
-    box-shadow: 0 0 50px 10px rgb(231, 231, 231);
+    transition: box-shadow .5s;
 }
 #cases{
     background-color: black;

@@ -16,47 +16,55 @@ main > section{
 }
 article{
     display: flex;
-    /* align-items: center; */
     width: 100%;
-    /* height: 100%; */
-    box-shadow: inset 0 0 1px 5px rgb(238, 255, 0);
 }
-article p{
+.effect-desc{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 59%;
     font-size: 250%;
     padding : 5%;
-    box-shadow: inset 0 0 1px 1px red;
+    z-index: 1;
+    background-color: white;
+
 }
 .mini-slider{
-    display: flex;
-    z-index: -1;
-    flex-wrap: nowrap;
     width: 40%;
-    box-shadow: 0 0 1px 5px cyan;
-}
-.mini-slider img{
-    display: none;
-    width: 0px;
-    height: 0px;
-    box-shadow: 0 0 1px 5px purple;
-}
-.mini-slider img:nth-child(1){
+    height: 100%;
     display: flex;
+    z-index: 0;
+    align-items:flex-end;
+}
+/* .mini-slider-able:hover{
+    animation: Switches 3s ease forwards;
+} */
+.slider-counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1%;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  0 10px 10px 1px grey;
+
+}
+.slider-counter li{
+    width: 100%;
+    margin: 115% 0;
+    height: 25px;
+    border-radius: 50px;
+    box-shadow: 0 0 1px 1px black;
+}
+.active-mark{
+    background-color: black;
+}
+.effect-img{
     width: 100%;
     height: 100%;
 }
 #wah-wah{
     /* pass */
-}
-#wah-wah img:nth-child(1), #wah-wah img:nth-child(2){
-    width: 50%;
-    height: 40%;
-}
-#wah-wah img:nth-child(3){
-    width: 100%;
-    height: 60%;
 }
 #compersor img{
     width: 100%;
@@ -107,6 +115,16 @@ article p{
     height: 10%;
     font-size: 270%;
     padding: 2% 0 0 0;
+}
 
-    box-shadow: inset 0 0 1px 1px red;
+@keyframes Switches{
+    0%{
+        filter:blur(10px);
+    }
+    /* 50%{
+        filter: blur(10px);
+    } */
+    100%{
+        filter: blur(0px);
+    }
 }
