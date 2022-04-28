@@ -108,7 +108,7 @@ nav a{
     position: absolute;
     visibility: hidden;
     margin: var(--menu-padding) 0 0 calc( var(--menu-padding) * -1);
-    width: 20%;
+    width: 16.6%;
     font-size: var(--font-size-submenu);
 }
 .sub-list-item:hover{
@@ -357,6 +357,9 @@ footer p{
     font-size: var(--font-size-copy);
     background-color: var(--bgColor-footer);
     color: var(--color-footer)
+}
+footer span{
+    display:none;
 }
 /* END OF FOOTER */
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }

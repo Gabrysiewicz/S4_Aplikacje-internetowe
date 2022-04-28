@@ -7,8 +7,8 @@ let maxWidth = window.innerWidth;
 canvas.width = maxWidth;
 canvas.height = 300;
 const path = "src/img/accessories/";
-const CASES = ['case2.jpg','case3.jpg','case4.jpg','case5.jpg','case6.webp'];
-const carouselWidth = imgWidth * (CASES.length - 1);
+const CASES = ['case1.jpg.crdownload','case2.jpg','case3.jpg','case4.jpg','case5.jpg','case6.webp'];
+const carouselWidth = imgWidth * (CASES.length - 2);
 
 const imgHeight = canvas.height;
 
@@ -23,7 +23,7 @@ let carousel = () =>{
     c.clearRect(0,0, canvas.width, canvas.height);
     for(let i = 0; i < CASES.length; i++){
         cases[i].myX+=offset;
-        if(cases[i].myX > carouselWidth){
+        if(cases[i].myX > carouselWidth + imgWidth){
             cases[i].myX = -imgWidth;
         }
         c.drawImage(cases[i], cases[i].myX, 0, imgWidth, imgHeight);

@@ -5,6 +5,12 @@ window.addEventListener('load', () => {
     for(let i = 0; i < articles.length; i++){
         articles[i].style.height = `${windowHeight}px`;
     }    
+    for(let i = 0; i < miniSliders.length; i++){
+        for(let j = 1; j < SliderImgs[i].length; j++){
+            // SliderImgs[i][j].style.visibility='hidden';
+            SliderImgs[i][j].style.display='none';
+        }
+    }
 });
 
 window.addEventListener('resize', () => {
@@ -12,6 +18,7 @@ window.addEventListener('resize', () => {
     for(let i = 0; i < articles.length; i++){
         articles[i].style.height = `${windowHeight}px`;
     }
+    
 });
 
 let SliderImgs = [];
@@ -37,6 +44,9 @@ for(let i = 0; i < miniSliders.length; i++){
                 let active = SliderImgs[i][0].src;
                 SliderImgs[i][0].src = SliderImgs[i][SliderImgIndex[i]].src;
                 SliderImgs[i][SliderImgIndex[i]].src = active;
+
+                SliderImgs[i][0].style.visibility='visible';
+                SliderImgs[i][SliderImgIndex[i]].style.visibility='hidden';
                 // Remove all active classes on li / Make markers grey
                 for(let x = 0; x < SliderImgs[i].length; x++){
                     marks[x].classList.remove('active-mark');

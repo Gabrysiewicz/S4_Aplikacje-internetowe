@@ -36,9 +36,9 @@ article{
     z-index: 0;
     align-items:flex-end;
 }
-/* .mini-slider-able:hover{
+.mini-slider-able{
     animation: Switches 3s ease forwards;
-} */
+}
 .slider-counter{
     display: flex;
     flex-direction: column;
