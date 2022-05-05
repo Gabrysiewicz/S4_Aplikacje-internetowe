@@ -30,6 +30,9 @@
 .exhibition:nth-child(2n) p{
     order:1;
 }
+.exhibition{
+    display: flex;
+}
 .exhibition img{
     padding:5%;
     height:500px;
@@ -41,3 +44,14 @@
     text-align: center;
     box-shadow: inset 0 0 1px 1px pink;
 } 
+@media (max-width:641px) {
+    .exhibition{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .exhibition img{
+        padding:5%;
+        height:500px;
+        width:auto;
+    }
+}

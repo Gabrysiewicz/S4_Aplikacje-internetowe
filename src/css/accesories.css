@@ -246,3 +246,13 @@ img{
     100%{transform: translateX(-90vw);}
 
 } */
+@media (max-width:961px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    #string-img{
+        display: flex;
+        flex-direction: column;
+    }
+    #string-img img{
+        width: 75%;
+        justify-content: center;
+    }
+}

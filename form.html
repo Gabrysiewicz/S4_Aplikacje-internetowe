@@ -72,30 +72,92 @@
             </ul>
         </nav>
         <main>
-            <section>
-                <form action="" method="POST" id="contact-form">
-                    <h1>Contact From</h1>
-                    <label for="name">Name</label><input type="text" id="name">
-                    <label for="surname">Surname</label><input type="text" in="surname">
-                    <label for="email">Email</label><input type="email" id="email">
-                    <label for="phone">Phone</label><input type="text" id="phone">
-                    <label for="cathegory">Cathegory:</label><select id="cathegory">
-                        <option>Website isn't working correctly</option>
-                        <option>Content isn't correct</option>
-                        <option>I want to cooperate</option>
-                        <option>Website propositions</option>
-                        <option>Other</option>
-                    </select>
-                    <section>
-                        <textarea cols="100" rows="10" maxlength="3000"></textarea>
-                    </section>
+            <section id="form-section">
+                <form action="/" method="GET" id="contact-form">
                     <div>
-                        <button>Send</button>
-                        <button>Preview</button>
-                        <button>Modify</button>
-                        <button>Cancel</button>
+                        <h1>Contact From</h1>
+                        <span id="feedback">Thanks for your feedback </span>
                     </div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="take-input" maxlength="32" name="name" pattern="[A-Za-z]{1,32}" title="Enter only chars (max.32)" >
+                    
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" class="take-input" maxlength="48" name="surname" pattern="[A-Za-z]{1,32}" title="Enter only chars (max.48)">
+                    
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" class="take-input" pattern="^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$" title='email_name@email_hosting.postfix' required>
+                    
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" class="take-input" >
+                    
+                    <label for="category">Category:</label>
+                    <select name='category' id="category" required>
+                        <option value='website error' id="website-error">Website isn't working correctly</option>
+                        <option value='content isnt correct' id="website-content">Content isn't correct</option>
+                        <option value='website propositions' id="website-propositions">Website propositions</option>
+                        <option value='social media error' id="website-socials">Social media are not working</option>
+                        <option value='I want to cooperate' id="cooperate">I want to cooperate</option>
+                        <option value='other' id="other" >Other</option>
+                    </select>
+                    <section id="error-extension">
+                        <label for="subpages">Specify subpage</label>
+                        <select name="subpages" id="subpages" class='take-select' required multiple>
+                            <option value="all">All subpages</option>
+                            <option value="home">Home</option>
+                            <option value="guitars">Guitars</option>
+                            <option value="amps">Amps</option>
+                            <option value="effects">Effects</option>
+                            <option value="accessories">Accessories</option>
+                            <option value="learning">Learning</option>
+                        </select>
+                    </section>
+                    <section id="cooperate-extension">
+                        <h3>Specify yourself</h3>
+                        <div>
+                            <input type="radio" class='take-radio' name="bussines-type" id="bussines" value="bussines">
+                            <label for="bussines">Bussines</label>
+                        </div>
+                        <div>
+                            <input type="radio" class='take-radio' name="bussines-type" id="private" value="private">
+                            <label for="bussines">Private</label>
+                        </div>
+                    </section>
+                    <section id="socials-extension">
+                        <h3>Select social-media</h3>
+                        <div>
+                            <input type="checkbox" class='take-checkbox' id="fb" value="facebook">
+                            <label for="fb">Facebook</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class='take-checkbox' id="ig" value="instagram">
+                            <label for="ig">Instagram</label>
+                        </div>
+                        <div>    
+                            <input type="checkbox" class='take-checkbox' id="tw" value="twitter">
+                            <label for="tw">Twitter</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class='take-checkbox' id="yt" value="youtube">
+                            <label for="yt">YouTube</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class='take-checkbox' id="ds" value="discord">
+                            <label for="ds">Discord</label>
+                        </div>
+                    </section>
+                    <section>
+                        <textarea id='take-text' cols="100" rows="10" maxlength="3000" minlength="30" required placeholder="What would you like to tell us ?"></textarea>
+                    </section>
+                    <div id="buttons">
+                        <!-- <input type="button" id="send" value="Send"></input> -->
+                        <input type="submit" id="send" value="Send"></input>
+                        <input type="button" id="preview" value="Preview"></input>
+                        <input type="button" id="modify" value="Modify"></input>
+                        <input type="reset" value="Cancel"></button>
+                    </div>
+                    
                 </form>
+                
             </section>
             <footer>
                 <ul id="additional">
@@ -122,6 +184,6 @@
         </main>
         
         <script type="text/javascript" src="src/javascript/script.js"></script>
-        <script type="text/javascript" src="src/javascript/frame.js"></script>
+        <script type="text/javascript" src="src/javascript/form.js"></script>
     </body>
 </html>
