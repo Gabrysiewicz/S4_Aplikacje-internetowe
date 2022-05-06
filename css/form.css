@@ -1,0 +1,50 @@
+:root{
+    --font-blue:rgb(221, 240, 253);
+    --bg-active:rgb(157, 209, 247);
+    --bg-light:rgb(186, 220, 243);
+    --bg-dark:rgb(16, 16, 126);
+    --font-dark:rgb(60, 60, 60);
+    --golden:rgb(255, 255, 234);
+    --link-yellow:rgb(252, 252, 105);
+
+    --header-fsize:23px;
+    --navbar-fsize:25px;
+    --content-fsize:30px;
+    --aside-fsize:27px;
+}
+*{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    font-size: var(--content-fsize);
+}
+.content-row{
+    padding: 1%;
+}
+.content-row ul{
+    padding: 10px 60px;
+}
+.content-row ul > li{
+    list-style-type: disc;
+}
+table{
+    width:50%;
+    padding: 10px 30px;
+}
+input[type=checkbox], input[type=radio]{
+    width:15px;
+    height:15px;
+    margin:5px 10px 5px 30px;
+}
+input[type=submit], input[type=reset]{
+    width:100px;
+    padding:5px;
+}
+input[type=submit]{
+    margin:10px 0 0 30px;
+}

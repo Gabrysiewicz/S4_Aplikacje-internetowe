@@ -1,0 +1,64 @@
+:root{
+    --header-fsize: 140%;
+    --list-item-fsize: 140%;
+    --sublist-item-fsize: 90%;
+    --content-fsize: 170%;
+    --content-fsize-m: 140%;
+    --aside-fsize: 180%;
+    --footer-fsize: 180%;
+
+    --font-blue:rgb(255, 255, 255);
+    --bg-light:rgb(179, 206, 241);
+    --bg-dark:rgb(36, 36, 175);
+    --link-yellow:rgb(255, 253, 131);
+
+    --mainlist-bg-color:rgb(203, 229, 247);
+    --mainlist-bg-color-hover:rgb(254, 254, 255);
+    --mainlist-shadow-hover:rgb(200, 220, 240);
+    --sublist-bg-color:rgb(202, 234, 255);
+    --sublist-shadow-hover:rgb(180, 220, 250);
+    --sublist-bg-color-hover:rgb(254, 254, 255);
+
+    --table-row-even:rgb(255, 255, 129);
+    --table-row-default:rgb(255, 255, 255);
+}
+*{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+main{
+    padding:1% 5%;
+    background-color: var(--bg-light);
+    font-size: var(--content-fsize);
+    /* box-shadow: inset 0 0 1px 1px rgb(161, 0, 0); */
+}
+main > section{
+    width: 100%;
+}
+table{
+    width: 100%;
+    text-align: center;
+    box-shadow: inset 0 0 1px 1px black;
+}
+table tr{
+    /* box-shadow: inset 0 0 1px 1px red; */
+    background-color: var(--table-row-default);
+}
+table tr td{
+    border: 1px solid black;
+}
+table th, tfoot tr{
+    background-color: var(--table-headers);
+    color:white;
+}
+thead tr, tfoot tr{
+    background-color: var(--bg-dark);
+}
+main a{
+    text-decoration: none;
+    color:var(--light-yellow);
+}
+tbody tr:nth-child(2n-1){
+    background-color: var(--table-row-even);
+}

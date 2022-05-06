@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Kamil Gabrysiewicz">
+
+        <link rel='stylesheet' type="text/css" href="css/style.css">
+        <link rel='stylesheet' type="text/css" href="css/form.css">
+
+    </head>
+    <body>
+        <header class="text-center">
+            <h1 id="header-text">Szybki kurs HTML</h1>
+        </header>
+            <!--  -->
+            <nav>
+                <ul id="main-list">
+                    <li class="list-item"><a href="index.html">Podstawy</a></li>
+                    <li class="list-item"><a href="table.html">Tabele</a></li>
+                    <li class="list-item sub-list-starter"><a href="form.html">Formularze</a>
+                        <ul id="sub-list">
+                            <li class="sublist-item"><a href="form.html">Pola formularza</a></li>
+                            <li class="sublist-item"><a href="form.html">Obliczenia w formularzu</a></li>
+                            <li class="sublist-item"><a href="../lab5/index.html">Formularz dotacji</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><a href="gallery.html">Galeria</a></li>
+                </ul>
+            </nav>
+            <!--  -->
+            <main>
+                <section class="content-row">
+                <h2>Podstawowe znaczniki formularza HTML to:</h2>
+                    <ul>
+                        <li>&lt;form&gt; - znacznik podstawowy zawierający pola formularza</li>
+                        <li>&lt;input&gt; - znacznik umozliwia wstawienie różnych pól w zależności od wartość tego atrybutu type</li>
+                        <li>&lt;select&gt; - pole formularza typu lista rozwijana</li>
+                        <li>&lt;texarea&gt;- pole formularza typu obszar tekstowy</li>
+                        <li>&lt;button&gt; - pole formularza typu przycisk</li>
+                    </ul>
+                </section>
+                <section>
+                    <form action="mailto:abc@def.pl" method="post" id="form">
+                        <section class="content-row">
+                            <h2>Przykładowy formularz HTML:</h2>
+                            <table>
+                                <tr>
+                                    <td><label for="name">Imie</label></td>
+                                    <!-- <td><input id="name" type="text" name="name" title="First letter must be capitalized (max 32 chars)" pattern="[A-Z]([a-z]){0,31}" required></td> -->
+                                    <td><input id="name" type="text" name="name" title="First letter must be capitalized (max 32 chars)" required></td>
+                                    <td><span id="name-error"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="surname">Nazwisko</label></td>
+                                    <!-- <td><input id="surname" type="text" name="surname"  title="First letter must be capitalized (max 32 chars)" pattern="[A-Z]([a-z]){0,31}" required></td> -->
+                                    <td><input id="surname" type="text" name="surname"  title="First letter must be capitalized (max 32 chars)" required></td>
+                                    <td><span id="surname-error"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="age">Wiek</label></td>
+                                    <!-- <td><input id="age" type="number" name="age" min="13" max="110" pattern="([0-9]{3}|[0-9]{2})" required></td> -->
+                                    <td><input id="age" type="number" name="age" min="13" max="110" required></td>
+                                    <td><span id="age-error"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="country">Kraj</label></td>
+                                    <td><select id="country" name="country">
+                                            <option class='take-option' value="pl">Polska</option>
+                                            <option class='take-option' value="ua">Ukraina</option>
+                                            <option class='take-option' value="ge">Niemcy</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">Email</label>
+                                    </td>
+                                    <td>
+                                        <!-- <input id="email" type="email" name="email" placeholder="your@email.smg" pattern="^[a-zA-Z0-9_]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$" required> -->
+                                        <input id="email" type="email" name="email" placeholder="your@email.smg" required>
+                                        <td><span id="email-error"></span></td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </section>
+
+                        <section class="content-row">
+                            <h2>Zamawiam tutorial z języka:</h2>
+                                <input class="checkbox-group" id="php" type="checkbox" value="php" name="php" required><label for="php">PHP</label>
+                                <br>
+                                <input class="checkbox-group" id="c/c++" type="checkbox" value="c/c++" name="c/c++" required><label for="c/c++">C/C++</label>
+                                <br>
+                                <input class="checkbox-group" id="java" type="checkbox" value="Java" name="java" required><label for="java">Java</label>
+                                <br>
+                                <input class="checkbox-group" id="js" type="checkbox" value="javascript" name="js" required><label for="js">Javascript</label>
+                                <br>
+                                <input class="checkbox-group" id="python" type="checkbox" value="Python" name="python" required><label for="python">Python</label>
+                        </section>
+                        
+                        <section class="content-row">
+                            <h2>Sposób zapłaty</h2>
+                            <input class='take-radio' id="eurocard" type="radio" name="payment" value="eurocard" required><label for="eurocard">eurocard</label>
+                            <br>
+                            <input class='take-radio' id="visa" type="radio" name="payment" value="visa"  required><label for="visa">visa</label>
+                            <br>
+                            <input class='take-radio' id="przelew" type="radio" name="payment" value="przelew bankowy"  required><label for="przelew">przelew bankowy</label>
+                            <br>
+                            <input type="submit" value="Wyślij" id="submit">
+                            <input type="reset" value="Anuluj">
+                        </section>
+                    </form>
+                </section>
+            </main>
+        <footer>
+            <p>&copy;BP</p>
+        </footer>
+        <script type="text/javascript" src="form.js"></script>
+    </body>
+</html>

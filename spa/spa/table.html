@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Table</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Kamil Gabrysiewicz">
+
+        <link rel='stylesheet' type="text/css" href="css/style.css">
+        <link rel='stylesheet' type="text/css" href="css/table.css">
+    </head>
+    <body>
+        <header class="text-center">
+            <h1>Szybki kurs HTML</h1>
+        </header>
+            <!--  -->
+            <nav>
+                <ul id="main-list">
+                    <li class="list-item"><a href="index.html">Podstawy</a></li>
+                    <li class="list-item"><a href="table.html">Tabele</a></li>
+                    <li class="list-item sub-list-starter"><a href="form.html">Formularze</a>
+                        <ul id="sub-list">
+                            <li class="sublist-item"><a href="form.html">Pola formularza</a></li>
+                            <li class="sublist-item"><a href="form.html">Obliczenia w formularzu</a></li>
+                            <li class="sublist-item"><a href="../lab5/index.html">Formularz dotacji</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><a href="gallery.html">Galeria</a></li>
+                </ul>
+            </nav>
+            <!--  -->
+            <main>
+                <section>
+                    <h3>Pellentesque commodo sollicitudin urna. Ut convallis tristique nulla a blandit. Quisque at nisl vitae arcu aliquam posuere ac vitae odio.</h3>
+                    <article>
+                        <ul>
+                            <li>&lt;table&gt; - Nulla efficitur tempor tortor, vitae pretium est vestibulum eget. </li>
+                            <li>&lt;thead&gt; - Nulla efficitur tempor tortor, vitae pretium est vestibulum eget. </li>
+                            <li>&lt;tbody&gt; - Nulla efficitur tempor tortor, vitae pretium est vestibulum eget. </li>
+                            <li>&lt;tfoot&gt; - Nulla efficitur tempor tortor, vitae pretium est vestibulum eget. </li>
+                            <li>&lt;tr&gt; - Nulla efficitur tempor tortor, vitae pretium est vestibulum eget. </li>
+                            <li>&lt;th&gt; - Nulla efficitur tempor tortor, vitae pretium est vestibulum eget. </li>
+                            <li>&lt;td&gt; - Nulla efficitur tempor tortor, vitae pretium est vestibulum eget. </li>
+                        </ul>
+                    </article>
+                    <h2>Przykładowa tabela HTML:</h2>
+                    
+                    <table>
+                        <caption>Popularność języków programowania:</caption>
+                        <thead style="text-align: center;">
+                            <tr>    <th rowspan="2">Język programowania</th>    <th colspan="2">Pozycja</th></tr>
+                            <tr>    <th>Luty 2020          </th><th>2015</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>                <td>Java</td>   <td>1</td>  <td>2</td></tr>
+                            <tr >   <td>C</td>      <td>2</td>  <td>1</td></tr>
+                            <tr>                <td>Python</td> <td>3</td>  <td>5</td></tr>
+                            <tr >   <td>C++</td>    <td>4</td>  <td>4</td></tr>
+                            <tr>                <td>C#</td>     <td>5</td>  <td>7</td></tr>
+                        </tbody>
+                        <tfoot>
+                            <tr><td colspan="3">
+                                Na podstawie:
+                                <br><a href="http://www.tiobe.com">http://www.tiobe.com</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+            </main> 
+        <footer>
+            &copy;BP
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
