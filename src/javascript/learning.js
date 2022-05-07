@@ -8,7 +8,7 @@ canvas.width = maxWidth;
 canvas.height = 300;
 const path = "src/img/learning/";
 const NOTES = ['note.png','eightNote.png','quarterNote.png','sixteen.png','wholeNote.png'];
-const notesQuantity = canvas.width/imgWidth;
+let notesQuantity = canvas.width/imgWidth;
 
 const imgHeight = 75;
 
@@ -42,6 +42,18 @@ for(let i = 0; i < notesQuantity; i++){
 window.addEventListener('resize', () => {
     maxWidth = window.innerWidth;
     canvas.width = maxWidth;
+
+    notes = [];
+    notesQuantity = canvas.width/imgWidth;
+    for(let i = 0; i < notesQuantity; i++){
+        notes[i] = new Image();
+        notes[i].myX = i*imgWidth;
+        notes[i].myY = (Math.floor(Math.random()*5)+1)*scale;
+    }
+    for(let i = 0; i < notesQuantity; i++){
+        let index = Math.floor(Math.random()*NOTES.length);
+        notes[i].src = `${path}${NOTES[index]}`;
+    }
 })
 let fiveline = () =>{
     for(let i = 3; i < 8; i++){
@@ -52,4 +64,3 @@ let fiveline = () =>{
         c.stroke();
     }
 }
-// fiveline();

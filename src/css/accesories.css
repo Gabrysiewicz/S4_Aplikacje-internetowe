@@ -1,21 +1,13 @@
-main > section{
-    /* height: 100%; */
-}
 #slider{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/accessories/picks3.jpg);
 }
 article{
     display: flex;
     padding: 1%;
-    /* box-shadow: inset 0 0 1px 1px red; */
-}
-img{
-    width: 35%;
 }
 #cables{
     display: flex;
     flex-wrap: nowrap;
-    /* align-content: space-between; */
     align-items: center;
     font-size: 200%;
 }
@@ -23,13 +15,12 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 65%;
     padding: 2% 0;
 }
 #cables img{
-    width: 35%;
-    height: 35%;
-    /* padding: 2%; */
+    width: 50%;
+    /* height: 35%; */
+    padding: 2%;
 }
 #cables thead{
     background-color: rgba(219, 219, 131, 0.767);
@@ -129,12 +120,10 @@ img{
 #shape ul li{
     margin: 5% 0;
     flex-basis: 100%;
-    /* width:16%; */
     font-size: 200%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* box-shadow: inset 0 0 1px 1px red; */
 }
 #shape img{
     margin: 5% 0;
@@ -145,6 +134,7 @@ img{
     transform: scale(1.1);
     transition: transform 1.3s ease;
 }
+
 #belts{
     display: flex;
     flex-direction: column;
@@ -190,10 +180,13 @@ img{
     background-color: black;
     color:white;
 }
-#cases-img img{
+canvas{
+    width:100%;
+}
+/* #cases-img img{
     width: 40%;
     height: 400px;
-}
+} */
 #some{
     background-image: url('/media/dell/Samsung USB/Studia/Semestr IV/Aplikacje Internetowe/final_project/src/img/accessories/accesoriess.jpg');
 }
@@ -246,6 +239,14 @@ img{
     100%{transform: translateX(-90vw);}
 
 } */
+@media (max-width:1296px)  {
+    #racks-img{
+        flex-wrap: wrap;
+    }
+    #racks-img img{
+        width: 33%;
+    }
+}
 @media (max-width:961px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
     #string-img{
         display: flex;
@@ -255,4 +256,37 @@ img{
         width: 75%;
         justify-content: center;
     }
+    #shape ul{
+        flex-wrap: wrap;
+    }
+    #shape ul li{
+        flex-basis: 33%;
+    }
+    #photo-grid{
+        flex-wrap: wrap;
+    }
+    #photo-grid div{
+        flex-basis: 50%;
+    }
+    #col-1{
+        order:4;
+    }
+    #col-2{
+        order:1;
+    }
+    #col-3{
+        order:3;
+    }
+    #col-4{
+        order:2;
+    }
+    #racks-img img{
+        width: 50%;
+    }
+}
+@media (max-width:696px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    #shape ul li{
+        flex-basis: 50%;
+    }
+    
 }

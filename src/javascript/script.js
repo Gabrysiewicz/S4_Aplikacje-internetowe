@@ -1,14 +1,16 @@
-let body = document.querySelector("body");
-let nav = document.querySelector("nav");
-let menu = document.getElementById("menu");
-let logo = document.getElementById("logo");
-let slider = document.getElementById("slider");
-let slide = document.getElementById("current-slide");
-let main = document.getElementsByTagName("main");
+const body = document.querySelector("body");
+const nav = document.querySelector("nav");
+const menu = document.getElementById("menu");
+const logo = document.getElementById("logo");
+const slider = document.getElementById("slider");
+const slide = document.getElementById("current-slide");
+const main = document.getElementsByTagName("main");
+const footerHovers = document.getElementsByClassName("mouse-event");
+const footerInfo = document.getElementsByClassName("additional-info");
 
-let menuItems = document.getElementsByClassName("menu-item");
-let menuImg = document.getElementsByClassName("roller"); 
-let sublists = document.getElementsByClassName("sub-list");
+const menuItems = document.getElementsByClassName("menu-item");
+const menuImg = document.getElementsByClassName("roller"); 
+const sublists = document.getElementsByClassName("sub-list");
 const maxHeight = window.innerHeight;
 const mobileWidth = 641;
 // menuStatus == 1 : visible
@@ -125,3 +127,14 @@ window.addEventListener('scroll', () => {
         }
     }
 })
+for(let i = 0; i < footerHovers.length; i++){ // footer Author,Email,Phone animation
+    footerHovers[i].addEventListener('mouseover', () => {
+        footerHovers[i].classList.add('FadeAway');
+        footerInfo[i].style.display = 'inline';
+    })
+}
+const terms = document.getElementById('terms').getElementsByTagName('li');
+const fetchBox = document.getElementById('async');
+for(let i = 0; i < terms.length; i++){
+    // Get data with fetch api
+}

@@ -84,8 +84,8 @@
     }
     .exhibition img{
         order:1;
-        width:100%;
-        height: 100%;
+        width:90vw;
+        /* 100vw/% destroys navbar and vw somehow */
     }
     .exhibition p{
         order:2;

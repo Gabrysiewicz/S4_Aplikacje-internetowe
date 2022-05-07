@@ -1,25 +1,27 @@
 let articles = document.getElementsByTagName('article');
 let windowHeight = window.innerHeight;
 let miniSliders = document.getElementsByClassName('mini-slider');
+
+// let adjustArticleToWindow = () => {
+//     windowHeight = window.innerHeight;
+//     for(let i = 0; i < articles.length; i++){
+//         if(windowHeight < 1296){
+//             articles[i].style.height = `${windowHeight*1.25}px`;
+//         }else{
+//             articles[i].style.height = `${windowHeight}px`;
+//         }
+        
+//     }
+// }
 window.addEventListener('load', () => {
-    for(let i = 0; i < articles.length; i++){
-        articles[i].style.height = `${windowHeight}px`;
-    }    
+    // adjustArticleToWindow();
     for(let i = 0; i < miniSliders.length; i++){
         for(let j = 1; j < SliderImgs[i].length; j++){
-            // SliderImgs[i][j].style.visibility='hidden';
             SliderImgs[i][j].style.display='none';
         }
     }
 });
-
-window.addEventListener('resize', () => {
-    windowHeight = window.innerHeight;
-    for(let i = 0; i < articles.length; i++){
-        articles[i].style.height = `${windowHeight}px`;
-    }
-    
-});
+// window.addEventListener('resize', adjustArticleToWindow);
 
 let SliderImgs = [];
 let SliderImgIndex = [];
@@ -70,6 +72,5 @@ for(let i = 0; i < miniSliders.length; i++){
             
         })
     }
-    
 }
 

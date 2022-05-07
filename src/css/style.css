@@ -6,7 +6,7 @@
     --font-size-guitars:200%;
     --font-size-guitars-lm:150%;
     --font-size-guitars-m:80%;
-    --font-size-guitars-s:3vmin;
+    --font-size-guitars-s:90%;
     --font-size-amps:220%;
     --font-size-amps-desc:170%;
     --font-size-amps-desc-m:100%;
@@ -272,7 +272,7 @@ main > article:first-child{
     background-attachment: fixed;
     background-position-x: center;
     background-position-y: center;
-    box-shadow: inset 0 0 1px 1px purple;
+    /* box-shadow: inset 0 0 1px 1px purple; */
 }
 #curt{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_cobain.jpg);
@@ -296,16 +296,16 @@ main > article:first-child{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/jurek.jpg);
 }
 #amps{
-    box-shadow: inset 0 0 1px 1px rgb(60, 255, 0);
+    /* box-shadow: inset 0 0 1px 1px rgb(60, 255, 0); */
 }
 #effects{
-    box-shadow: inset 0 0 1px 1px rgb(0, 247, 255);
+    /* box-shadow: inset 0 0 1px 1px rgb(0, 247, 255); */
 }
 #accesories{
-    box-shadow: inset 0 0 1px 1px rgb(0, 17, 255);
+    /* box-shadow: inset 0 0 1px 1px rgb(0, 17, 255); */
 }
 #learning{
-    box-shadow: inset 0 0 1px 1px rgb(200, 2, 250);
+    /* box-shadow: inset 0 0 1px 1px rgb(200, 2, 250); */
 }
 /* START OF FOOTER */
 footer{
@@ -358,8 +358,11 @@ footer p{
     background-color: var(--bgColor-footer);
     color: var(--color-footer)
 }
-footer span{
+.additional-info{
     display:none;
+}
+#terms li{
+    cursor: pointer;
 }
 /* END OF FOOTER */
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
@@ -399,6 +402,10 @@ footer span{
     .sub-list{
         width: 100%;
     }
+    #slider-text{
+        top: 20%;
+        font-size: 250%;
+    }
     #guitars p{
         font-size: var(--font-size-guitars-s);
     }
@@ -411,10 +418,17 @@ footer span{
         visibility: visible !important; 
     }
 }
-@media (max-width:961px)  {/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (max-width:961px) and (min-width:641px)  {
+    #slider-text{
+        top: 30%;
+        font-size: 275%;
+    }
     #guitars p{
         font-size: var(--font-size-guitars-m);
     }
+}
+@media (max-width:961px){/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
     #img-amps, #img-learning{
         background-color: #000;
     }
@@ -443,15 +457,12 @@ footer span{
         margin: 5% 0;
         width:60%;
     }
-    
 }
 @media (min-width:1025px) {/* big landscape tablets, laptops, and desktops */ 
 
 }
 @media (max-width:1281px) { /* hi-res laptops and desktops */ 
-    /* #guitars p{
-        font-size: var(--font-size-guitars-lm);
-    } */
+
 }
 @media (prefers-reduced-motion: no-preference) {
     #slider-text{
@@ -510,5 +521,14 @@ footer span{
     }
     to{
         transform: scale(1)  translateY(0%);
+    }
+}
+.FadeAway{
+    animation: FadeAway 2s forwards;
+}
+@keyframes FadeAway{
+    to{
+        opacity: 0;
+        font-size: 0;
     }
 }

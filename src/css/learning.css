@@ -1,9 +1,9 @@
 
+body{
+    width:100%;
+}
 #slider{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/guitarist_2.jpeg);
-}
-#notes{
-
 }
 #note-slider{
     box-shadow: 0 0 10px 1px grey;
@@ -17,7 +17,6 @@
 #chords > div{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 #chords p{
     margin:5% 0;
@@ -49,5 +48,17 @@ main > article{
     font-size:200%;
     padding: 5% 0;
     box-shadow: inset 0px 20px 50px -40px grey;
-
+}
+canvas{ /* needed for downscaleing */
+    width:100%;
+}
+@media (max-width:696px){
+    .chord-col{
+        flex-wrap: wrap;
+    }
+    .chord-col img{
+        flex-basis: 65%;
+        height: 100%;
+        margin: 5% 0 0 0;
+    }
 }
