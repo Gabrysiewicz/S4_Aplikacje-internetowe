@@ -78,12 +78,12 @@ let switchRollers = () => {
 }
 let showMenu = () => { // display vertical Navbar/Menu
     for(let i = 0; i < menuItems.length; i++){   
-        menuItems[i].style.visibility = "visible";
+        menuItems[i].style.display = "block";
     }
 }
 let hideMenu = () => { // show vertical Navbar/Menu
     for(let i = 0; i < menuItems.length; i++){   
-        menuItems[i].style.visibility = "hidden";
+        menuItems[i].style.display = "none";
     }
 }
 let switchMenu = () => {

@@ -7,7 +7,7 @@
     --font-size-guitars-m:150%;
 }
 #slider{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_11.jpg);
+    background-image: url(/src/img/guitar/Guitar_11.jpg);
 }
 /* odd */
 .exhibition:nth-child(2n-1){
@@ -36,7 +36,7 @@
 }
 .exhibition img{
     padding:5%;
-    /* height:500px; */
+    max-height:500px;
     width:33%;
 }
 .exhibition p{

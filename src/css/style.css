@@ -48,8 +48,8 @@ html, body{
 }
 ::-webkit-scrollbar{
     z-index: 100;
+    width: 5px;
     background-color: black;
-
 }
 ::-webkit-scrollbar-thumb{
     z-index: 99;
@@ -71,6 +71,8 @@ nav{
     width: 100%;
     color: var(--color-nav);
     font-size: var(--font-size-menu);
+
+
 }
 nav > div{
     background-color: var(--bgColor-nav);
@@ -162,7 +164,7 @@ main > article:first-child{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_12.jpg);
+    background-image: url("/src/img/guitar/Guitar_12.jpg");
 }
 #override{
     position: absolute;
@@ -172,7 +174,7 @@ main > article:first-child{
     width: 100%;
     height: 100%;
     background-color:rgba(0,0,0,1);
-    animation: FadeOut 10s forwards;
+    animation: FadeOut 10s forwards ease-out;
 }
 #guitars{
     display: flex;
@@ -285,25 +287,25 @@ main > article:first-child{
     /* box-shadow: inset 0 0 1px 1px purple; */
 }
 #curt{
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_cobain.jpg);
+    background-image: url(/src/img/backgrounds/background_cobain.jpg);
 }
 #metallica{
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_metallica_2.jpg);
+    background-image: url(/src/img/backgrounds/background_metallica_2.jpg);
 }
 #classicals{
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical.jpg);
+    background-image: url(/src/img/backgrounds/background_classical.jpg);
 }
 #fender{
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/amp/Fender_wallpaper_3.jpg);
+    background-image: url(/src/img/amp/Fender_wallpaper_3.jpg);
 }
 #effects{
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/effects3.jpg);
+    background-image: url(/src/img/backgrounds/effects3.jpg);
 }
 #estas{
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical_2.jpg);
+    background-image: url(/src/img/backgrounds/background_classical_2.jpg);
 }
 #jurek{
-    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/jurek.jpg);
+    background-image: url(/src/img/backgrounds/jurek.jpg);
 }
 #amps{
     /* box-shadow: inset 0 0 1px 1px rgb(60, 255, 0); */
@@ -410,9 +412,16 @@ footer p{
         left: 0;
         top: 0;
         width: 100%;
+
+        height: 100%; /* Height is needed for scroll to work properly*/
+        overflow: auto;
+        white-space: nowrap;
+    }
+    nav a{
+        color: white;
     }
     nav > div{
-        background-color: var(--bgColor-nav);
+        background-color: black;
         width: 100%;
         text-align: center;
     }
@@ -427,8 +436,13 @@ footer p{
         width: 100%;
         text-align: center;
     }
+    .menu-item{
+        background-color: rgba(0, 0, 0, 1);
+    }
+    .menu-item:hover{
+        background-color: rgba(30,30,30, 1);
+    }
     .roller{
-        /* visibility: visible; */
         display:inline;
     }
     .sub-list{
@@ -443,6 +457,9 @@ footer p{
     }
     #social img{
         width:100%;
+    }
+    .sub-list-item{
+        margin: 0 0 0 1%;
     }
 }
 @media (min-width:641px)  {
@@ -496,7 +513,7 @@ footer p{
 @media (max-width:1281px) { /* hi-res laptops and desktops */ 
 
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) { /* After load navbar goes down. Without prefer... it won't happend*/
     #slider-text{
         animation: FadeIn 3s ease-in forwards;
     }
