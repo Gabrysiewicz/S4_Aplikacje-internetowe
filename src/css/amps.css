@@ -4,6 +4,7 @@
     --color-guitar-lore:#fff;
     --color-odd:#000;
     --color-even:#fff;
+    --font-size-amps-m:200%;
 }
 #slider{
     background-repeat: no-repeat;
@@ -38,7 +39,8 @@
 .exhibition img{
     padding:5%;
     height:500px;
-    width:33%;
+    max-width:33%;
+    width: auto;
 }
 .exhibition p{
     padding:5%;
@@ -57,24 +59,9 @@
 @media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
     
 }
-@media (max-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (max-width:1200px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     .exhibition{
         flex-direction: column;
-    }
-    .exhibition:nth-child(2n-1){
-        background-color: var(--bgColor-odd);
-        color: var(--color-odd);
-    }
-    .exhibition:nth-child(2n-1) img{
-        order:1;
-    }
-    .exhibition:nth-child(2n-1) p{
-        order:2;
-    }
-    /* even */
-    .exhibition:nth-child(2n){
-        background-color: var(--bgColor-even);
-        color: var(--color-even);
     }
     .exhibition:nth-child(2n) img{
         order:1;
@@ -83,14 +70,14 @@
         order:2;
     }
     .exhibition img{
-        order:1;
-        width:90vw;
-        /* 100vw/% destroys navbar and vw somehow */
+        order: 1;
+        max-width: none;
+        width: auto;
     }
     .exhibition p{
         order:2;
         padding:5%;
-        font-size: var(--font-size-guitars);
+        font-size: var(--font-size-amps-m);
         text-align: center;
         box-shadow: inset 0 0 1px 1px pink;
     } 

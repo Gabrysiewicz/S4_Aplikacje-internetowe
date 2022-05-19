@@ -53,8 +53,12 @@ canvas{ /* needed for downscaleing */
     width:100%;
 }
 @media (max-width:696px){
+    #chord-box{
+        background-color: black;
+    }
     .chord-col{
         flex-wrap: wrap;
+        margin: 0 5%;
     }
     .chord-col img{
         flex-basis: 65%;

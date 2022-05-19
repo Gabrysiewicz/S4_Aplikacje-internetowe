@@ -30,7 +30,7 @@ for(let i = 0; i < miniSliders.length; i++){
 }
 for(let i = 0; i < miniSliders.length; i++){
     SliderImgs[i] = miniSliders[i].getElementsByClassName('effect-img');
-    if(SliderImgs[i].length > 1){ // If slider is possible to exist === There are atleast 2 imgs ; then
+    if(SliderImgs[i].length > 1){ // Is slider possible to create === There are atleast 2 imgs => then
         let marker = document.getElementsByClassName('slider-marker')[i]; // Ul
         let mark; // li
         for(let x = 0; x < SliderImgs[i].length; x++){
@@ -38,7 +38,7 @@ for(let i = 0; i < miniSliders.length; i++){
             mark.appendChild(document.createTextNode(""));
             marker.appendChild(mark);
         }
-        let marks = marker.getElementsByTagName('li'); // Array of li
+        let marks = marker.getElementsByTagName('li'); // Array of li's
         marks[0].classList.add('active-mark'); // Make first(default) marker active
         miniSliders[i].addEventListener('click', () => { // After clicking on image do
             if(SliderImgIndex[i] < SliderImgs[i].length ){

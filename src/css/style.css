@@ -46,6 +46,16 @@ html, body{
     font-family: var(--font-family);
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    z-index: 100;
+    background-color: black;
+
+}
+::-webkit-scrollbar-thumb{
+    z-index: 99;
+    border-radius:50px;
+    background-color: white;
+}
 ul{
     list-style-type: none;
 }
@@ -86,7 +96,7 @@ nav a{
     display: none;
     margin: 0 0 0 5px;
 }
-.roller:hover{
+.roller:hover, #social img, #terms li, #logo:hover, #store{
     cursor:pointer;
 }
 .menu-item{
@@ -152,7 +162,7 @@ main > article:first-child{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_12.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_12.jpg);
 }
 #override{
     position: absolute;
@@ -275,25 +285,25 @@ main > article:first-child{
     /* box-shadow: inset 0 0 1px 1px purple; */
 }
 #curt{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_cobain.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_cobain.jpg);
 }
 #metallica{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_metallica_2.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_metallica_2.jpg);
 }
 #classicals{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical.jpg);
 }
 #fender{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/amp/Fender_wallpaper_3.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/amp/Fender_wallpaper_3.jpg);
 }
 #effects{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/effects3.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/effects3.jpg);
 }
 #estas{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical_2.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/background_classical_2.jpg);
 }
 #jurek{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/jurek.jpg);
+    background-image: url(file:///media/paranoid/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/backgrounds/jurek.jpg);
 }
 #amps{
     /* box-shadow: inset 0 0 1px 1px rgb(60, 255, 0); */
@@ -348,7 +358,6 @@ footer ul{
     transition: background-color 2s;
 }
 #social img{
-    cursor: pointer;
     margin: 10% 0 ;
     width:40%;
 }
@@ -361,8 +370,34 @@ footer p{
 .additional-info{
     display:none;
 }
-#terms li{
-    cursor: pointer;
+#fetch-box{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: inset 0 30px 30px -30px grey;
+}
+#fetch-title{
+    text-align: center;
+    padding: 4% 0 0 0;
+}
+#fetch-data-list{
+    font-size: .8em;
+    padding:2% 5%;
+    text-align: left;
+}
+#fetch-data-list li::first-letter{
+    margin-left: -5px;
+}
+#fetch-data-list li{
+    padding: .3% 0;
+    margin-left: 35px;
+}
+#google-map{
+    padding: 2% 0;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
 }
 /* END OF FOOTER */
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
@@ -385,9 +420,6 @@ footer p{
         display:inline;
         width: 50px;
         height: 50px;
-    }
-    #logo:hover{
-        cursor: pointer;
     }
     #menu{
         display: flex;
@@ -466,7 +498,7 @@ footer p{
 }
 @media (prefers-reduced-motion: no-preference) {
     #slider-text{
-        animation: FadeIn 3s linear  forwards;
+        animation: FadeIn 3s ease-in forwards;
     }
     nav{
         animation: moveDown 1s ease-out forwards;
@@ -524,11 +556,24 @@ footer p{
     }
 }
 .FadeAway{
-    animation: FadeAway 2s forwards;
+    animation: FooterFadeAway 3s forwards linear;
 }
-@keyframes FadeAway{
+@keyframes FooterFadeAway{
     to{
         opacity: 0;
         font-size: 0;
+    }
+}
+.FadeIn{
+    animation: FooterFadeIn 4s forwards linear;
+}
+@keyframes FooterFadeIn{
+    from{
+        opacity: 0;
+        font-size: 0;
+    }
+    to{
+        opacity: 1;
+        font-size: 100%;
     }
 }

@@ -4,6 +4,7 @@
     --color-guitar-lore:#fff;
     --color-odd:#000;
     --color-even:#fff;
+    --font-size-guitars-m:150%;
 }
 #slider{
     background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_11.jpg);
@@ -35,7 +36,7 @@
 }
 .exhibition img{
     padding:5%;
-    height:500px;
+    /* height:500px; */
     width:33%;
 }
 .exhibition p{
@@ -53,5 +54,16 @@
         padding:5%;
         height:500px;
         width:auto;
+    }
+    .exhibition:nth-child(2n) img{
+        order:1;
+    }
+    .exhibition:nth-child(2n) p{
+        order:2;
+    }
+}
+@media (max-width:1000px) {
+    .exhibition p{
+        font-size: var(--font-size-guitars-m);
     }
 }
