@@ -67,6 +67,18 @@ textarea{
     box-shadow: inset 1px 1px 7px 1px rgb(180, 180, 180);
     transition: box-shadow .7s;
 }
+@media (max-width:320px) {
+    form{
+        padding: 10px;
+        width: 100%;
+        box-shadow:  0 0 50px 1px rgb(73, 73, 73);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px;
+        background-color: var(--body-bg-color);
+    }
+}
 /* .form-approved{
     animation: approved 10s ease-in-out forwards;
 } */

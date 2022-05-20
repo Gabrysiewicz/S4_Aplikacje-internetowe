@@ -9,6 +9,7 @@ let main = document.getElementsByTagName("main");
 let menuItems = document.getElementsByClassName("menu-item");
 let menuImg = document.getElementsByClassName("roller"); 
 let sublists = document.getElementsByClassName("sub-list");
+let sublistItems = document.getElementsByClassName("sub-list-items");
 const maxHeight = window.innerHeight;
 const mobileWidth = 641;
 // menuStatus == 1 : visible
@@ -18,6 +19,7 @@ if(window.innerWidth > mobileWidth){
 }else{
     sessionStorage.setItem("menuStatus", 0);
 }
+
 
 window.addEventListener('resize', () => {
     if(window.innerWidth > mobileWidth){
@@ -72,10 +74,16 @@ let showMenu = () => {
     for(let i = 0; i < menuItems.length; i++){   
         menuItems[i].style.visibility = "visible";
     }
+    for(let i = 0; i < sublistItems.length; i++){   
+        sublistItems[i].style.visibility = "visible";
+    }
 }
 let hideMenu = () => {
     for(let i = 0; i < menuItems.length; i++){   
         menuItems[i].style.visibility = "hidden";
+    }
+    for(let i = 0; i < sublistItems.length; i++){   
+        sublistItems[i].style.visibility = "hidden";
     }
 }
 let switchMenu = () => {
@@ -89,6 +97,8 @@ let rollSublistUp = () => {
     for(let id = 0; id < sublists.length; id++){   
         sublists[id].style.position = "absolute";
         sublists[id].style.visibility = "hidden";
+        // sublists[id].style.display = "none";
+
     }
 }
 let rollSublist = (id) => {

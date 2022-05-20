@@ -170,7 +170,7 @@ article{
         height: 100%;
         width: auto;
         order: 2;
-        border-radius: 45px;
+        border-radius: 35px;
 
     }
     .slider-counter{
@@ -181,5 +181,10 @@ article{
 @media (max-width:696px){
     article > .effect-desc{
         font-size: var(--font-size-amps-s);
+    }
+}
+@media (max-width:320px){
+    .slider img{
+        max-width: 320px;
     }
 }

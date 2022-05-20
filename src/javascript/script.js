@@ -142,8 +142,8 @@ for(let i = 0; i < footerHovers.length; i++){ // footer Author,Email,Phone anima
 // Start of FetchAPI
 const terms = document.getElementById('terms').getElementsByTagName('li');
 const fetchBox = document.getElementById('fetch-box');
-// const docsPath = 'https://serwer2138353.home.pl/studia/pai/s&rc/docs'; // Online
-const docsPath = 'http://127.0.0.1:5500//src/docs'; // Local
+const docsPath = 'https://serwer2138353.home.pl/studia/pai/src/docs'; // Online
+// const docsPath = 'http://127.0.0.1:5500//src/docs'; // Local
 const docsNames = [`tos.json`,`privacy.json`,`tac.json`];
 const docs = [];
 for(i = 0; i < docsNames.length; i++){
@@ -166,7 +166,11 @@ for(let i = 0; i < terms.length; i++){
                 fetchBox.innerHTML = template;
                 sessionStorage.setItem('currentFetch', docsNames[i]);
             })
-            .catch( error => console.log(error));
+            .catch( error => {
+                template = "We have some trouble with showing this data or maybe your ethernet is disconnected. Who knows ¯\_( ͡❛ ͜ʖ ͡❛)_/¯. \n Here's the following error:"
+                template =+ error;
+                fetchBox.innerHTML = template;
+            });
         }else{ // If fetch data is already shown => Hide term
             fetchBox.innerHTML = '';
             sessionStorage.setItem('currentFetch', 'none');

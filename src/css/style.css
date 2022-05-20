@@ -7,13 +7,15 @@
     --font-size-guitars-l:150%;
     --font-size-guitars-m:80%;
     --font-size-guitars-s:90%;
-    --font-size-guitars-xs:50%;
+    --font-size-guitars-xs:70%;
 
     --font-size-amps:220%;
+    --font-size-amps-xs:80%;
     --font-size-amps-desc:170%;
     --font-size-amps-desc-m:100%;
     --font-size-learning:220%;
     --font-size-learning-m: 200%;
+    --font-size-learning-xs: 150%;
     --font-size-learning-desc:170%;
     --font-size-fetch:200%;
     --font-size-fetch-m:150%;
@@ -167,7 +169,7 @@ main > article:first-child{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url("/src/img/guitar/Guitar_12.jpg");
+    background-image: url(/src/img/guitar/Guitar_12.jpg);
 }
 #override{
     position: absolute;
@@ -241,12 +243,12 @@ main > article:first-child{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    font-size: var(--font-size-learning);
 }
 #learning p{
     padding:10% 10%;
     text-align: center;
     flex-basis: 100%;
+    font-size: var(--font-size-learning);
 }
 #img-learning{
     display: flex;
@@ -367,13 +369,17 @@ footer ul{
 }
 #social img{
     margin: 10% 0 ;
-    width:40%;
+    width: 40%;
 }
 footer p{
     width: 100%;
     font-size: var(--font-size-copy);
     background-color: var(--bgColor-footer);
     color: var(--color-footer)
+}
+footer a{
+    text-decoration: none;
+    color: var(--color-body);
 }
 .additional-info{
     display:none;
@@ -506,7 +512,7 @@ footer p{
         width:60%;
     }
     .sub-list-item{
-        margin: 0 0 0 1%;
+        /* margin: 0 0 0 1%; */
     }
 }
 @media (max-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
@@ -528,19 +534,25 @@ footer p{
         font-size: var(--font-size-footer);
     }
 }
-@media (min-width:641px)  {
+@media (min-width:642px)  {
     .menu-item:hover > .sub-list{
         visibility: visible !important; 
     }
 }
 @media (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+    #slider-text{
+        top: 30%;
+        width: 50%;
+        font-size: 200%;
+        color: var(--color-nav);
+    }
     #guitars p{
         font-size: var(--font-size-guitars-xs);
     }
-    .amps-desc{
+    .amps-desc, #amps p{
         font-size: var(--font-size-amps-xs);
     }
-    .learning-desc{
+    .learning-desc, #learning p{
         font-size: var(--font-size-learning-xs);
     }
 }

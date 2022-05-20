@@ -183,10 +183,6 @@ article{
 canvas{
     width:100%;
 }
-/* #cases-img img{
-    width: 40%;
-    height: 400px;
-} */
 #some{
     background-image: url(/src/img/accessories/accesoriess.jpg);
 }
@@ -199,46 +195,6 @@ canvas{
 #case-slider{
     box-shadow: 0 0 10px 1px rgb(201, 201, 201);
 }
-/* #cases-img{
-    width: 100%;
-    height: 50%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap; 
-    background-color: rgb(0,0,0);
-    overflow-x: hidden;
-    box-shadow: 0 0 10px 1px red;
-}
-#slider{
-    list-style: none;
-    height: 100%;
-    display: flex;
-
-
-    animation: scroll 10s linear infinite; 
-}
-#slider li{
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-
-    white-space: nowrap;
-}
-#slider li img{
-    width:400px;
-    height:400px;
-}
-@keyframes scroll{
-
-    0%{transform:  translateX(0);}
-    100%{transform: translateX(-90vw);}
-
-} */
 @media (max-width:1296px)  {
     #racks-img{
         flex-wrap: wrap;
@@ -294,5 +250,26 @@ canvas{
     }
     #thickness{
         flex-basis: 100%;
+    }
+}
+@media (max-width:320px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    #strings table{
+        max-width: 320px;
+        padding: 0;
+        margin: 0;
+    }
+    #strings div{
+        font-size: 140%;
+    }
+    #racks-img img{
+        width: 90%;
+    }
+    #racks{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #cables table{
+        margin: 0;
+        width: 90%;
     }
 }

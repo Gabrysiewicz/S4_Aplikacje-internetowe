@@ -47,7 +47,7 @@ modify.addEventListener('click', (e) => { // Modify sended form
 remove.addEventListener('click', (e) => { // Modify sended form
     // e.preventDefault();
     disableForm(false);
-    localStorage.setItem('user_data_form', '');
+    localStorage.setItem('user_form_json', '');
     alert("Data from Form has been deleted");
     form.reset();
 })
@@ -134,6 +134,15 @@ let validateForm = () => {
         user_data_form.email = inputs[2].value;
         user_data_form.phone = inputs[3].value;
 
+        // let phonePattern = /^\+?[0-9]{2,3}(\ [0-9]{3}){3}/;
+
+        // if(phonePattern.test(inputs[3].value)){
+        //     user_data_form.phone = inputs[3].value;
+        // }
+        
+        
+        user_data_form.phone = inputs[3].value;
+
         user_data_form.category = currentCategory;
         switch(currentCategory){
             case 'website error':
@@ -186,6 +195,11 @@ let validateForm = () => {
         }
         userMsgBox += `\nBusiness:${user_data_form.business}`;
         userMsgBox += `\nMessage:\n${user_data_form.text}`;
+        // if(phonePattern.test(inputs[3].value)){
+        //     return confirm(userMsgBox);
+        // }else{
+        //     return alert("Your Phone number is incorrect.\n Start with + then 2 up to 3 digits and 3x3 digits separated with spaces\n Example: +48 111 222 333 or +123 456 789 012")
+        // }
         return confirm(userMsgBox);
 }
 let previewForm = () =>{
@@ -263,7 +277,7 @@ let disableForm = (state) =>{
         send.removeAttribute('disabled');
     }
 }
-
+// Fancy
 const FormSection = document.getElementById('form-section');
 let FormBgRed = 254;
 let FormBgGreen = 254;
