@@ -1,6 +1,8 @@
 # <p align="center">Aplikacje internetowe</p>
 ### <p align="center">Strona internetowa poświęcona gitarom i wszystkim co z nimi związane</p>
 
+<p align="center">https://serwer2138353.home.pl/studia/pai/index.html</p>
+
 ## <h2 align='center'>Wymagania dotyczące projektu końcowego z Podstaw aplikacji internetowych</h2>
 1. Projekt końcowy powinien być utworzony indywidualnie przez każdego studenta. Nie
 może to być modyfikacja projektu tworzonego w trakcie zajęć laboratoryjnych. Proszę
