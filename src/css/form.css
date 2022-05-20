@@ -2,9 +2,9 @@
     --body-bg-color:rgb(238, 238, 238);
 }
 form{
+    z-index: 89;
     padding: 50px;
     width: 500px;
-    /* height: 80vh; */
     box-shadow:  0 0 50px 1px rgb(73, 73, 73);
     margin: auto;
     display: flex;
@@ -59,7 +59,7 @@ textarea{
     border-radius: 5px;
     
     background-color: rgba(0, 0, 0, .69);
-    color:var(--body-bg-color);
+    color: var(--body-bg-color);
     font-size: 1em;
     font-weight: bold;
 }
@@ -67,11 +67,11 @@ textarea{
     box-shadow: inset 1px 1px 7px 1px rgb(180, 180, 180);
     transition: box-shadow .7s;
 }
-.form-approved{
+/* .form-approved{
     animation: approved 10s ease-in-out forwards;
-}
+} */
 .text-approved{
-    animation: approvedText 10s ease-in-out forwards;
+    animation: approvedText 20s ease-in-out forwards;
 }
 @keyframes approved {
     to{
@@ -79,7 +79,10 @@ textarea{
     }
 }
 @keyframes approvedText {
-    to{
+    50%{
         color: rgb(0, 0,0);
+    }
+    to{
+        opacity: 0;
     }
 }

@@ -1,5 +1,5 @@
 #slider{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/accessories/picks3.jpg);
+    background-image: url(/src/img/accessories/picks3.jpg);
 }
 article{
     display: flex;
@@ -188,13 +188,13 @@ canvas{
     height: 400px;
 } */
 #some{
-    background-image: url('/media/dell/Samsung USB/Studia/Semestr IV/Aplikacje Internetowe/final_project/src/img/accessories/accesoriess.jpg');
+    background-image: url(/src/img/accessories/accesoriess.jpg);
 }
 #some2{
-    background-image: url('/media/dell/Samsung USB/Studia/Semestr IV/Aplikacje Internetowe/final_project/src/img/accessories/accesoriess.jpg');
+    background-image: url(/src/img/accessories/accesoriess.jpg);
 }
 #some3{
-    background-image: url('/media/dell/Samsung USB/Studia/Semestr IV/Aplikacje Internetowe/final_project/src/img/accessories/cases.jpg');
+    background-image: url(/src/img/accessories/cases.jpg);
 }
 #case-slider{
     box-shadow: 0 0 10px 1px rgb(201, 201, 201);
@@ -288,5 +288,11 @@ canvas{
     #shape ul li{
         flex-basis: 50%;
     }
-    
+    #materials{
+        flex-basis: 100%;
+        box-shadow: inset -5px 0 10px 1px rgb(20,20,20);
+    }
+    #thickness{
+        flex-basis: 100%;
+    }
 }

@@ -19,7 +19,6 @@ if(window.innerWidth > mobileWidth){
     sessionStorage.setItem("menuStatus", 0);
 }
 
-
 window.addEventListener('resize', () => {
     if(window.innerWidth > mobileWidth){
         showMenu();
