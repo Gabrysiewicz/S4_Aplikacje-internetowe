@@ -40,6 +40,10 @@ window.addEventListener('resize', () => { // Switch desktop navbar to mobile and
         switchRollers();
         logo.src = "src/img/logo_w_rotate.png";
     }
+    if(localStorage.getItem("MapStatus") == 1){
+        clearFetchBox();
+        localStorage.setItem("currentFetch", 'none');
+    }
     logo.style.height = `${menu.style.height}px`;
 });
 logo.addEventListener("click", () => { // Show/Hide Navbar [Mobile]
@@ -138,7 +142,7 @@ for(let i = 0; i < footerHovers.length; i++){ // footer Author,Email,Phone anima
 // Start of FetchAPI
 const terms = document.getElementById('terms').getElementsByTagName('li');
 const fetchBox = document.getElementById('fetch-box');
-// const docsPath = 'https://serwer2138353.home.pl/studia/pai/src/docs'; // Online
+// const docsPath = 'https://serwer2138353.home.pl/studia/pai/s&rc/docs'; // Online
 const docsPath = 'http://127.0.0.1:5500//src/docs'; // Local
 const docsNames = [`tos.json`,`privacy.json`,`tac.json`];
 const docs = [];
@@ -172,11 +176,19 @@ for(let i = 0; i < terms.length; i++){
 // Google maps
 const map = '';
 const store = document.getElementById('store');
-store.addEventListener('click', () => { // Load/Unload map
+localStorage.setItem('MapStatus', 0);
+let clearFetchBox = () => {
+    fetchBox.innerHTML = '';
+    localStorage.setItem('MapStatus', 0);
+    sessionStorage.setItem('currentFetch', 'none');
+}
+let mapLoader = () => { // Load/Unload map
     if(sessionStorage.getItem('currentFetch') === 'map'){ // If map is already loaded => Hide map
-        fetchBox.innerHTML = '';
+        clearFetchBox();
     }else{ // If map isn't loaded => Load map
-        fetchBox.innerHTML = '<div id="google-map"><iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.959517659392!2d22.55151581556967!3d51.238240438168454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225771a38cd54f%3A0x3616f8a886ad8051!2sMassive%20Music!5e0!3m2!1spl!2spl!4v1652987828643!5m2!1spl!2spl" width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>'
+        fetchBox.innerHTML = '<div id="google-map"><iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.959517659392!2d22.55151581556967!3d51.238240438168454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225771a38cd54f%3A0x3616f8a886ad8051!2sMassive%20Music!5e0!3m2!1spl!2spl!4v1652987828643!5m2!1spl!2spl" width="750" height="450" style="border:0; max-width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>'
         sessionStorage.setItem('currentFetch', 'map');
+        localStorage.setItem('MapStatus', 1);
     }
-})
+}
+store.addEventListener('click', mapLoader);

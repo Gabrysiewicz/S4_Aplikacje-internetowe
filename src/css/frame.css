@@ -2,7 +2,7 @@ main > section{
     height: 100%;
 }
 #slider{
-    background-image: url(file:///media/dell/Samsung%20USB/Studia/Semestr%20IV/Aplikacje%20Internetowe/final_project/src/img/guitar/Guitar_5.jpg);
+    background-image: url(/src/img/guitar/Guitar_5.jpg);
 }
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
